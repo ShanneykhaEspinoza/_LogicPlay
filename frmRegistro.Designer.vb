@@ -1,0 +1,245 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frmRegistro
+    Inherits System.Windows.Forms.Form
+
+    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Requerido por el Diseñador de Windows Forms
+    Private components As System.ComponentModel.IContainer
+
+    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+    'Se puede modificar usando el Diseñador de Windows Forms.  
+    'No lo modifique con el editor de código.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRegistro))
+        Me.txtNombreUsuario = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtCédulaUsuario = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtContraseniaUsuario = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnAlmacenarRegistro = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2CirclePictureBox2 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'txtNombreUsuario
+        '
+        Me.txtNombreUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.txtNombreUsuario.BorderRadius = 10
+        Me.txtNombreUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtNombreUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNombreUsuario.DefaultText = ""
+        Me.txtNombreUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtNombreUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtNombreUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNombreUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNombreUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNombreUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNombreUsuario.ForeColor = System.Drawing.Color.Black
+        Me.txtNombreUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(41, 106)
+        Me.txtNombreUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombreUsuario.Name = "txtNombreUsuario"
+        Me.txtNombreUsuario.PlaceholderText = "Digite su nombre..."
+        Me.txtNombreUsuario.SelectedText = ""
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(348, 48)
+        Me.txtNombreUsuario.TabIndex = 1
+        '
+        'txtCédulaUsuario
+        '
+        Me.txtCédulaUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.txtCédulaUsuario.BorderRadius = 10
+        Me.txtCédulaUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCédulaUsuario.DefaultText = ""
+        Me.txtCédulaUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCédulaUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCédulaUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCédulaUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCédulaUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCédulaUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtCédulaUsuario.ForeColor = System.Drawing.Color.Black
+        Me.txtCédulaUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCédulaUsuario.Location = New System.Drawing.Point(84, 190)
+        Me.txtCédulaUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCédulaUsuario.Name = "txtCédulaUsuario"
+        Me.txtCédulaUsuario.PlaceholderText = "Digite su identificación..."
+        Me.txtCédulaUsuario.SelectedText = ""
+        Me.txtCédulaUsuario.Size = New System.Drawing.Size(254, 48)
+        Me.txtCédulaUsuario.TabIndex = 2
+        '
+        'txtContraseniaUsuario
+        '
+        Me.txtContraseniaUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.txtContraseniaUsuario.BorderRadius = 10
+        Me.txtContraseniaUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtContraseniaUsuario.DefaultText = ""
+        Me.txtContraseniaUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtContraseniaUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtContraseniaUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtContraseniaUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtContraseniaUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtContraseniaUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtContraseniaUsuario.ForeColor = System.Drawing.Color.Black
+        Me.txtContraseniaUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtContraseniaUsuario.Location = New System.Drawing.Point(84, 275)
+        Me.txtContraseniaUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtContraseniaUsuario.MaxLength = 8
+        Me.txtContraseniaUsuario.Name = "txtContraseniaUsuario"
+        Me.txtContraseniaUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContraseniaUsuario.PlaceholderText = "Cree una contraseña..."
+        Me.txtContraseniaUsuario.SelectedText = ""
+        Me.txtContraseniaUsuario.Size = New System.Drawing.Size(254, 47)
+        Me.txtContraseniaUsuario.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(100, 246)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(203, 20)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Cree una contraseña"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(69, 161)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(261, 20)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Digite su número de cédula"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(69, 77)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(256, 20)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Digite su nombre completo"
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.MidnightBlue
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Cornsilk
+        Me.Label4.Location = New System.Drawing.Point(-4, -1)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(422, 65)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "     Registro de usuarios"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnAlmacenarRegistro
+        '
+        Me.btnAlmacenarRegistro.BackColor = System.Drawing.Color.Transparent
+        Me.btnAlmacenarRegistro.BorderRadius = 10
+        Me.btnAlmacenarRegistro.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAlmacenarRegistro.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAlmacenarRegistro.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAlmacenarRegistro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAlmacenarRegistro.FillColor = System.Drawing.Color.GreenYellow
+        Me.btnAlmacenarRegistro.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnAlmacenarRegistro.ForeColor = System.Drawing.Color.Black
+        Me.btnAlmacenarRegistro.Image = CType(resources.GetObject("btnAlmacenarRegistro.Image"), System.Drawing.Image)
+        Me.btnAlmacenarRegistro.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.btnAlmacenarRegistro.Location = New System.Drawing.Point(237, 357)
+        Me.btnAlmacenarRegistro.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAlmacenarRegistro.Name = "btnAlmacenarRegistro"
+        Me.btnAlmacenarRegistro.Size = New System.Drawing.Size(152, 48)
+        Me.btnAlmacenarRegistro.TabIndex = 12
+        Me.btnAlmacenarRegistro.Text = "&Almacenar"
+        '
+        'Guna2CirclePictureBox2
+        '
+        Me.Guna2CirclePictureBox2.BackColor = System.Drawing.Color.MidnightBlue
+        Me.Guna2CirclePictureBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2CirclePictureBox2.Image = CType(resources.GetObject("Guna2CirclePictureBox2.Image"), System.Drawing.Image)
+        Me.Guna2CirclePictureBox2.ImageRotate = 0!
+        Me.Guna2CirclePictureBox2.Location = New System.Drawing.Point(7, -1)
+        Me.Guna2CirclePictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Guna2CirclePictureBox2.Name = "Guna2CirclePictureBox2"
+        Me.Guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.Guna2CirclePictureBox2.Size = New System.Drawing.Size(76, 65)
+        Me.Guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2CirclePictureBox2.TabIndex = 14
+        Me.Guna2CirclePictureBox2.TabStop = False
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 10
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.MidnightBlue
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
+        Me.Guna2Button1.Location = New System.Drawing.Point(41, 357)
+        Me.Guna2Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(152, 48)
+        Me.Guna2Button1.TabIndex = 15
+        Me.Guna2Button1.Text = "&Regresar"
+        '
+        'frmRegistro
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ClientSize = New System.Drawing.Size(416, 426)
+        Me.Controls.Add(Me.Guna2Button1)
+        Me.Controls.Add(Me.Guna2CirclePictureBox2)
+        Me.Controls.Add(Me.btnAlmacenarRegistro)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtContraseniaUsuario)
+        Me.Controls.Add(Me.txtCédulaUsuario)
+        Me.Controls.Add(Me.txtNombreUsuario)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Name = "frmRegistro"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Form4"
+        CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents txtNombreUsuario As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtCédulaUsuario As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtContraseniaUsuario As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btnAlmacenarRegistro As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2CirclePictureBox2 As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+End Class
