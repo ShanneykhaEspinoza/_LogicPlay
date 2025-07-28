@@ -27,7 +27,6 @@ Partial Class frmAdministrarCuestionarios
         Me.btnAgregarCuestionario = New Guna.UI2.WinForms.Guna2Button()
         Me.btnEditarCuestionario = New Guna.UI2.WinForms.Guna2Button()
         Me.btnVerCuestionario = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnEliminarCuestionario = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -35,10 +34,10 @@ Partial Class frmAdministrarCuestionarios
         'ListView1
         '
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(-7, 187)
+        Me.ListView1.Location = New System.Drawing.Point(-8, 234)
         Me.ListView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(925, 329)
+        Me.ListView1.Size = New System.Drawing.Size(1040, 410)
         Me.ListView1.TabIndex = 15
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -53,10 +52,10 @@ Partial Class frmAdministrarCuestionarios
         Me.btnAgregarCuestionario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnAgregarCuestionario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnAgregarCuestionario.ForeColor = System.Drawing.Color.White
-        Me.btnAgregarCuestionario.Location = New System.Drawing.Point(38, 130)
+        Me.btnAgregarCuestionario.Location = New System.Drawing.Point(43, 162)
         Me.btnAgregarCuestionario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAgregarCuestionario.Name = "btnAgregarCuestionario"
-        Me.btnAgregarCuestionario.Size = New System.Drawing.Size(115, 42)
+        Me.btnAgregarCuestionario.Size = New System.Drawing.Size(129, 52)
         Me.btnAgregarCuestionario.TabIndex = 16
         Me.btnAgregarCuestionario.Text = "Agregar"
         '
@@ -71,10 +70,10 @@ Partial Class frmAdministrarCuestionarios
         Me.btnEditarCuestionario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnEditarCuestionario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnEditarCuestionario.ForeColor = System.Drawing.Color.White
-        Me.btnEditarCuestionario.Location = New System.Drawing.Point(169, 130)
+        Me.btnEditarCuestionario.Location = New System.Drawing.Point(190, 162)
         Me.btnEditarCuestionario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEditarCuestionario.Name = "btnEditarCuestionario"
-        Me.btnEditarCuestionario.Size = New System.Drawing.Size(118, 42)
+        Me.btnEditarCuestionario.Size = New System.Drawing.Size(133, 52)
         Me.btnEditarCuestionario.TabIndex = 17
         Me.btnEditarCuestionario.Text = "Actualizar"
         '
@@ -89,32 +88,12 @@ Partial Class frmAdministrarCuestionarios
         Me.btnVerCuestionario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnVerCuestionario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnVerCuestionario.ForeColor = System.Drawing.Color.White
-        Me.btnVerCuestionario.Location = New System.Drawing.Point(454, 130)
+        Me.btnVerCuestionario.Location = New System.Drawing.Point(342, 162)
         Me.btnVerCuestionario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnVerCuestionario.Name = "btnVerCuestionario"
-        Me.btnVerCuestionario.Size = New System.Drawing.Size(115, 42)
+        Me.btnVerCuestionario.Size = New System.Drawing.Size(129, 52)
         Me.btnVerCuestionario.TabIndex = 19
         Me.btnVerCuestionario.Text = "Ver"
-        '
-        'btnEliminarCuestionario
-        '
-        Me.btnEliminarCuestionario.BackColor = System.Drawing.Color.Transparent
-        Me.btnEliminarCuestionario.BorderRadius = 10
-        Me.btnEliminarCuestionario.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnEliminarCuestionario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnEliminarCuestionario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnEliminarCuestionario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnEliminarCuestionario.FillColor = System.Drawing.Color.MidnightBlue
-        Me.btnEliminarCuestionario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnEliminarCuestionario.ForeColor = System.Drawing.Color.White
-        Me.btnEliminarCuestionario.Image = CType(resources.GetObject("btnEliminarCuestionario.Image"), System.Drawing.Image)
-        Me.btnEliminarCuestionario.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnEliminarCuestionario.Location = New System.Drawing.Point(305, 130)
-        Me.btnEliminarCuestionario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnEliminarCuestionario.Name = "btnEliminarCuestionario"
-        Me.btnEliminarCuestionario.Size = New System.Drawing.Size(128, 42)
-        Me.btnEliminarCuestionario.TabIndex = 23
-        Me.btnEliminarCuestionario.Text = "Eliminar"
         '
         'Guna2Button6
         '
@@ -128,10 +107,10 @@ Partial Class frmAdministrarCuestionarios
         Me.Guna2Button6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button6.ForeColor = System.Drawing.Color.GhostWhite
         Me.Guna2Button6.Image = CType(resources.GetObject("Guna2Button6.Image"), System.Drawing.Image)
-        Me.Guna2Button6.Location = New System.Drawing.Point(-7, 20)
+        Me.Guna2Button6.Location = New System.Drawing.Point(-8, 25)
         Me.Guna2Button6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2Button6.Name = "Guna2Button6"
-        Me.Guna2Button6.Size = New System.Drawing.Size(160, 42)
+        Me.Guna2Button6.Size = New System.Drawing.Size(180, 52)
         Me.Guna2Button6.TabIndex = 22
         Me.Guna2Button6.Text = " &Regresar"
         '
@@ -140,27 +119,26 @@ Partial Class frmAdministrarCuestionarios
         Me.Label4.BackColor = System.Drawing.Color.MidnightBlue
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Label4.Location = New System.Drawing.Point(129, 20)
+        Me.Label4.Location = New System.Drawing.Point(145, 25)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(789, 42)
+        Me.Label4.Size = New System.Drawing.Size(888, 52)
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "    Administrar cuestionarios"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmAdministrarCuestionarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(910, 510)
+        Me.ClientSize = New System.Drawing.Size(1024, 638)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Guna2Button6)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.btnAgregarCuestionario)
         Me.Controls.Add(Me.btnEditarCuestionario)
         Me.Controls.Add(Me.btnVerCuestionario)
-        Me.Controls.Add(Me.btnEliminarCuestionario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmAdministrarCuestionarios"
@@ -173,7 +151,6 @@ Partial Class frmAdministrarCuestionarios
     Friend WithEvents btnAgregarCuestionario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEditarCuestionario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnVerCuestionario As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnEliminarCuestionario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label4 As Label
 End Class
