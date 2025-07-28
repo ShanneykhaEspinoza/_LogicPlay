@@ -44,12 +44,12 @@ Partial Class frmCodigoParticipante
         Me.txtCodigoIngresadoJugador.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtCodigoIngresadoJugador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtCodigoIngresadoJugador.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtCodigoIngresadoJugador.Location = New System.Drawing.Point(26, 236)
-        Me.txtCodigoIngresadoJugador.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCodigoIngresadoJugador.Location = New System.Drawing.Point(29, 327)
+        Me.txtCodigoIngresadoJugador.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCodigoIngresadoJugador.Name = "txtCodigoIngresadoJugador"
         Me.txtCodigoIngresadoJugador.PlaceholderText = "Ingrese el código para esta partida..."
         Me.txtCodigoIngresadoJugador.SelectedText = ""
-        Me.txtCodigoIngresadoJugador.Size = New System.Drawing.Size(359, 57)
+        Me.txtCodigoIngresadoJugador.Size = New System.Drawing.Size(404, 71)
         Me.txtCodigoIngresadoJugador.TabIndex = 27
         '
         'Guna2CirclePictureBox2
@@ -58,11 +58,11 @@ Partial Class frmCodigoParticipante
         Me.Guna2CirclePictureBox2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2CirclePictureBox2.Image = CType(resources.GetObject("Guna2CirclePictureBox2.Image"), System.Drawing.Image)
         Me.Guna2CirclePictureBox2.ImageRotate = 0!
-        Me.Guna2CirclePictureBox2.Location = New System.Drawing.Point(26, -2)
+        Me.Guna2CirclePictureBox2.Location = New System.Drawing.Point(29, -2)
         Me.Guna2CirclePictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2CirclePictureBox2.Name = "Guna2CirclePictureBox2"
         Me.Guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox2.Size = New System.Drawing.Size(71, 58)
+        Me.Guna2CirclePictureBox2.Size = New System.Drawing.Size(80, 72)
         Me.Guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2CirclePictureBox2.TabIndex = 26
         Me.Guna2CirclePictureBox2.TabStop = False
@@ -74,7 +74,7 @@ Partial Class frmCodigoParticipante
         Me.Label4.ForeColor = System.Drawing.Color.Cornsilk
         Me.Label4.Location = New System.Drawing.Point(-4, -2)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(427, 58)
+        Me.Label4.Size = New System.Drawing.Size(480, 72)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "Código"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -91,10 +91,10 @@ Partial Class frmCodigoParticipante
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
         Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
-        Me.Guna2Button1.Location = New System.Drawing.Point(271, 8)
+        Me.Guna2Button1.Location = New System.Drawing.Point(305, 10)
         Me.Guna2Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(152, 48)
+        Me.Guna2Button1.Size = New System.Drawing.Size(171, 60)
         Me.Guna2Button1.TabIndex = 29
         Me.Guna2Button1.Text = "&Regresar"
         '
@@ -112,21 +112,21 @@ Partial Class frmCodigoParticipante
         Me.btnCopiarCodigo.ForeColor = System.Drawing.Color.White
         Me.btnCopiarCodigo.Image = CType(resources.GetObject("btnCopiarCodigo.Image"), System.Drawing.Image)
         Me.btnCopiarCodigo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnCopiarCodigo.Location = New System.Drawing.Point(121, 419)
+        Me.btnCopiarCodigo.Location = New System.Drawing.Point(136, 524)
         Me.btnCopiarCodigo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnCopiarCodigo.Name = "btnCopiarCodigo"
-        Me.btnCopiarCodigo.Size = New System.Drawing.Size(165, 42)
+        Me.btnCopiarCodigo.Size = New System.Drawing.Size(186, 52)
         Me.btnCopiarCodigo.TabIndex = 31
         Me.btnCopiarCodigo.Text = "&Unirme a sala"
         '
         'frmCodigoParticipante
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(421, 633)
+        Me.ClientSize = New System.Drawing.Size(474, 791)
         Me.Controls.Add(Me.btnCopiarCodigo)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.txtCodigoIngresadoJugador)
