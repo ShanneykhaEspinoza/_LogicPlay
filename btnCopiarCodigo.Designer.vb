@@ -44,12 +44,12 @@ Partial Class frmCodigoParticipante
         Me.txtCodigoIngresadoJugador.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtCodigoIngresadoJugador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtCodigoIngresadoJugador.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtCodigoIngresadoJugador.Location = New System.Drawing.Point(29, 327)
+        Me.txtCodigoIngresadoJugador.Location = New System.Drawing.Point(29, 309)
         Me.txtCodigoIngresadoJugador.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCodigoIngresadoJugador.Name = "txtCodigoIngresadoJugador"
         Me.txtCodigoIngresadoJugador.PlaceholderText = "Ingrese el código para esta partida..."
         Me.txtCodigoIngresadoJugador.SelectedText = ""
-        Me.txtCodigoIngresadoJugador.Size = New System.Drawing.Size(404, 71)
+        Me.txtCodigoIngresadoJugador.Size = New System.Drawing.Size(403, 58)
         Me.txtCodigoIngresadoJugador.TabIndex = 27
         '
         'Guna2CirclePictureBox2
