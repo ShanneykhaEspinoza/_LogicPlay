@@ -11,14 +11,15 @@
     Friend Sub LOGIN(ByVal CEDULA As String, ByVal CLAVE As String)
         T.Tables.Clear()
 
-        SQL = "SELECT CEDULA, CLAVE, ROL FROM USUARIOS WHERE CEDULA = '" & CEDULA & "' AND CLAVE = '" & CLAVE & "'"
+        SQL = "SELECT CEDULA, CLAVE, ID_ROL FROM USUARIO WHERE CEDULA = '" & CEDULA & "' AND CLAVE = '" & CLAVE & "'"
         CARGAR_TABLA(T, SQL)
 
-        Dim ROL As String = T.Tables(0).Rows(0).ItemArray(2)
+        Dim ROL As Integer = 0
+        ROL = T.Tables(0).Rows(0).ItemArray(2)
 
         If T.Tables(0).Rows.Count > 0 Then
             MsgBox("Inicio de sesión exitoso", vbInformation + vbOKOnly)
-            If (ROL = "ADMIN") Then
+            If (ROL = 1) Then
                 frmMenu.Show()
                 Me.Hide()
             Else
