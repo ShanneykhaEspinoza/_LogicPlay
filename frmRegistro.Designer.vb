@@ -24,7 +24,7 @@ Partial Class frmRegistro
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRegistro))
         Me.txtNombreUsuario = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtCédulaUsuario = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtCedulaUsuario = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtContraseniaUsuario = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -59,27 +59,27 @@ Partial Class frmRegistro
         Me.txtNombreUsuario.Size = New System.Drawing.Size(348, 48)
         Me.txtNombreUsuario.TabIndex = 1
         '
-        'txtCédulaUsuario
+        'txtCedulaUsuario
         '
-        Me.txtCédulaUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.txtCédulaUsuario.BorderRadius = 10
-        Me.txtCédulaUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtCédulaUsuario.DefaultText = ""
-        Me.txtCédulaUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtCédulaUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtCédulaUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtCédulaUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtCédulaUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtCédulaUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtCédulaUsuario.ForeColor = System.Drawing.Color.Black
-        Me.txtCédulaUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtCédulaUsuario.Location = New System.Drawing.Point(84, 190)
-        Me.txtCédulaUsuario.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCédulaUsuario.Name = "txtCédulaUsuario"
-        Me.txtCédulaUsuario.PlaceholderText = "Digite su identificación..."
-        Me.txtCédulaUsuario.SelectedText = ""
-        Me.txtCédulaUsuario.Size = New System.Drawing.Size(254, 48)
-        Me.txtCédulaUsuario.TabIndex = 2
+        Me.txtCedulaUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.txtCedulaUsuario.BorderRadius = 10
+        Me.txtCedulaUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCedulaUsuario.DefaultText = ""
+        Me.txtCedulaUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCedulaUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCedulaUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCedulaUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCedulaUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCedulaUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtCedulaUsuario.ForeColor = System.Drawing.Color.Black
+        Me.txtCedulaUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCedulaUsuario.Location = New System.Drawing.Point(84, 185)
+        Me.txtCedulaUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCedulaUsuario.Name = "txtCedulaUsuario"
+        Me.txtCedulaUsuario.PlaceholderText = "Digite su identificación..."
+        Me.txtCedulaUsuario.SelectedText = ""
+        Me.txtCedulaUsuario.Size = New System.Drawing.Size(254, 48)
+        Me.txtCedulaUsuario.TabIndex = 2
         '
         'txtContraseniaUsuario
         '
@@ -219,7 +219,7 @@ Partial Class frmRegistro
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtContraseniaUsuario)
-        Me.Controls.Add(Me.txtCédulaUsuario)
+        Me.Controls.Add(Me.txtCedulaUsuario)
         Me.Controls.Add(Me.txtNombreUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -233,7 +233,7 @@ Partial Class frmRegistro
     End Sub
 
     Friend WithEvents txtNombreUsuario As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents txtCédulaUsuario As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtCedulaUsuario As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtContraseniaUsuario As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label

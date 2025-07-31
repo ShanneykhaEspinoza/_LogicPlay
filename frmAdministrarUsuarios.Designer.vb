@@ -29,20 +29,28 @@ Partial Class frmAdministrarUsuarios
         Me.btnVerUsuario = New Guna.UI2.WinForms.Guna2Button()
         Me.txtFiltrarParticipante = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEliminarUsuario = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'ListView1
         '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(-4, 198)
         Me.ListView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(912, 312)
         Me.ListView1.TabIndex = 5
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'btnAgregarUsuario
         '
@@ -91,7 +99,7 @@ Partial Class frmAdministrarUsuarios
         Me.btnVerUsuario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnVerUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnVerUsuario.ForeColor = System.Drawing.Color.White
-        Me.btnVerUsuario.Location = New System.Drawing.Point(467, 142)
+        Me.btnVerUsuario.Location = New System.Drawing.Point(325, 142)
         Me.btnVerUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnVerUsuario.Name = "btnVerUsuario"
         Me.btnVerUsuario.Size = New System.Drawing.Size(115, 42)
@@ -132,26 +140,6 @@ Partial Class frmAdministrarUsuarios
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Búsqueda "
         '
-        'btnEliminarUsuario
-        '
-        Me.btnEliminarUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.btnEliminarUsuario.BorderRadius = 10
-        Me.btnEliminarUsuario.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnEliminarUsuario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnEliminarUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnEliminarUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnEliminarUsuario.FillColor = System.Drawing.Color.MidnightBlue
-        Me.btnEliminarUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnEliminarUsuario.ForeColor = System.Drawing.Color.White
-        Me.btnEliminarUsuario.Image = CType(resources.GetObject("btnEliminarUsuario.Image"), System.Drawing.Image)
-        Me.btnEliminarUsuario.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnEliminarUsuario.Location = New System.Drawing.Point(316, 142)
-        Me.btnEliminarUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnEliminarUsuario.Name = "btnEliminarUsuario"
-        Me.btnEliminarUsuario.Size = New System.Drawing.Size(125, 42)
-        Me.btnEliminarUsuario.TabIndex = 24
-        Me.btnEliminarUsuario.Text = "Eliminar"
-        '
         'Guna2Button6
         '
         Me.Guna2Button6.BackColor = System.Drawing.Color.Transparent
@@ -184,6 +172,26 @@ Partial Class frmAdministrarUsuarios
         Me.Label4.Text = "    Administrar usuarios"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Cedula"
+        Me.ColumnHeader2.Width = 220
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Nombre"
+        Me.ColumnHeader3.Width = 240
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Rol"
+        Me.ColumnHeader4.Width = 220
+        '
         'frmAdministrarUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -199,7 +207,6 @@ Partial Class frmAdministrarUsuarios
         Me.Controls.Add(Me.btnAgregarUsuario)
         Me.Controls.Add(Me.btnEditarUsuario)
         Me.Controls.Add(Me.btnVerUsuario)
-        Me.Controls.Add(Me.btnEliminarUsuario)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -216,7 +223,10 @@ Partial Class frmAdministrarUsuarios
     Friend WithEvents btnVerUsuario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtFiltrarParticipante As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnEliminarUsuario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
 End Class

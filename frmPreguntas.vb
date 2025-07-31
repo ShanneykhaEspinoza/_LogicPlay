@@ -10,19 +10,4 @@
 
     End Sub
 
-    Private Sub btnAgregarImagen_Click(sender As Object, e As EventArgs) Handles btnAgregarImagen.Click
-        If ABRIR.ShowDialog = DialogResult.OK Then
-            btnAgregarImagen.Image = Image.FromFile(ABRIR.FileName)
-            btnAgregarImagen.Tag = ABRIR.FileName
-        Else
-            btnAgregarImagen.Tag = ""
-
-        End If
-    End Sub
-
-
-
-
-    'My.Computer.Audio.Play(My.Resources.TUSONIDO, AudioPlayMode.Background)
-
 End Class
