@@ -29,17 +29,28 @@ Partial Class frmAdministrarCuestionarios
         Me.btnVerCuestionario = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'ListView1
         '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(-8, 234)
+        Me.ListView1.Location = New System.Drawing.Point(-7, 195)
         Me.ListView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(1040, 410)
         Me.ListView1.TabIndex = 15
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'btnAgregarCuestionario
         '
@@ -88,7 +99,7 @@ Partial Class frmAdministrarCuestionarios
         Me.btnVerCuestionario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnVerCuestionario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnVerCuestionario.ForeColor = System.Drawing.Color.White
-        Me.btnVerCuestionario.Location = New System.Drawing.Point(342, 162)
+        Me.btnVerCuestionario.Location = New System.Drawing.Point(454, 130)
         Me.btnVerCuestionario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnVerCuestionario.Name = "btnVerCuestionario"
         Me.btnVerCuestionario.Size = New System.Drawing.Size(129, 52)
@@ -126,13 +137,43 @@ Partial Class frmAdministrarCuestionarios
         Me.Label4.Text = "    Administrar cuestionarios"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Nombre / Titulo"
+        Me.ColumnHeader2.Width = 200
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Tema "
+        Me.ColumnHeader3.Width = 200
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "# Preguntas"
+        Me.ColumnHeader4.Width = 70
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Tiempo total"
+        Me.ColumnHeader5.Width = 70
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Fecha creacion"
+        Me.ColumnHeader6.Width = 150
+        '
         'frmAdministrarCuestionarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1024, 638)
+        Me.ClientSize = New System.Drawing.Size(910, 510)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Guna2Button6)
         Me.Controls.Add(Me.ListView1)
@@ -153,4 +194,10 @@ Partial Class frmAdministrarCuestionarios
     Friend WithEvents btnVerCuestionario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
 End Class

@@ -1,4 +1,5 @@
 ﻿Module BASE_DATOS
+
     Public Db As New OleDb.OleDbConnection
     Public T As New DataSet
     Public SQL As String
@@ -41,4 +42,5 @@
             PK = 1
         End If
     End Function
+
 End Module

@@ -39,12 +39,9 @@ Partial Class frmPreguntas
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.ABRIR = New System.Windows.Forms.OpenFileDialog()
         Me.btnAgregarImagen = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtPuntos = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnAgregarSonido = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2CirclePictureBox1
@@ -325,15 +322,6 @@ Partial Class frmPreguntas
         Me.btnAgregarImagen.TabIndex = 26
         Me.btnAgregarImagen.Text = "&Agregar imagen"
         '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(158, 575)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(250, 167)
-        Me.Guna2PictureBox1.TabIndex = 27
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -367,26 +355,6 @@ Partial Class frmPreguntas
         Me.txtPuntos.Size = New System.Drawing.Size(158, 38)
         Me.txtPuntos.TabIndex = 29
         '
-        'btnAgregarSonido
-        '
-        Me.btnAgregarSonido.BackColor = System.Drawing.Color.Transparent
-        Me.btnAgregarSonido.BorderRadius = 10
-        Me.btnAgregarSonido.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnAgregarSonido.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnAgregarSonido.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAgregarSonido.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAgregarSonido.FillColor = System.Drawing.Color.GreenYellow
-        Me.btnAgregarSonido.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnAgregarSonido.ForeColor = System.Drawing.Color.Black
-        Me.btnAgregarSonido.Image = CType(resources.GetObject("btnAgregarSonido.Image"), System.Drawing.Image)
-        Me.btnAgregarSonido.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnAgregarSonido.Location = New System.Drawing.Point(18, 777)
-        Me.btnAgregarSonido.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnAgregarSonido.Name = "btnAgregarSonido"
-        Me.btnAgregarSonido.Size = New System.Drawing.Size(222, 38)
-        Me.btnAgregarSonido.TabIndex = 30
-        Me.btnAgregarSonido.Text = "&Agregar sonido"
-        '
         'frmPreguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -394,10 +362,8 @@ Partial Class frmPreguntas
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(581, 886)
-        Me.Controls.Add(Me.btnAgregarSonido)
         Me.Controls.Add(Me.txtPuntos)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.btnAgregarImagen)
         Me.Controls.Add(Me.Guna2Button6)
         Me.Controls.Add(Me.txtNombreCuestionario)
@@ -419,7 +385,6 @@ Partial Class frmPreguntas
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form6"
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -441,8 +406,6 @@ Partial Class frmPreguntas
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ABRIR As OpenFileDialog
     Friend WithEvents btnAgregarImagen As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPuntos As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents btnAgregarSonido As Guna.UI2.WinForms.Guna2Button
 End Class
