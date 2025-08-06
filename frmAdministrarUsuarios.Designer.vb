@@ -23,7 +23,7 @@ Partial Class frmAdministrarUsuarios
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdministrarUsuarios))
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.L_ADMINUSUARIO = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -35,22 +35,45 @@ Partial Class frmAdministrarUsuarios
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Guna2ContextMenuStrip1 = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
+        Me.ELIMINAR_ADMINUSUARIO = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Guna2ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ListView1
+        'L_ADMINUSUARIO
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(-4, 248)
-        Me.ListView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(1026, 389)
-        Me.ListView1.TabIndex = 5
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.L_ADMINUSUARIO.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.L_ADMINUSUARIO.FullRowSelect = True
+        Me.L_ADMINUSUARIO.GridLines = True
+        Me.L_ADMINUSUARIO.HideSelection = False
+        Me.L_ADMINUSUARIO.Location = New System.Drawing.Point(-4, 198)
+        Me.L_ADMINUSUARIO.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.L_ADMINUSUARIO.MultiSelect = False
+        Me.L_ADMINUSUARIO.Name = "L_ADMINUSUARIO"
+        Me.L_ADMINUSUARIO.Size = New System.Drawing.Size(912, 312)
+        Me.L_ADMINUSUARIO.TabIndex = 5
+        Me.L_ADMINUSUARIO.UseCompatibleStateImageBehavior = False
+        Me.L_ADMINUSUARIO.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Cedula"
+        Me.ColumnHeader2.Width = 220
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Nombre"
+        Me.ColumnHeader3.Width = 240
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Rol"
+        Me.ColumnHeader4.Width = 220
         '
         'ColumnHeader1
         '
@@ -192,6 +215,29 @@ Partial Class frmAdministrarUsuarios
         Me.Label4.Text = "    Administrar usuarios"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Guna2ContextMenuStrip1
+        '
+        Me.Guna2ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.Guna2ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ELIMINAR_ADMINUSUARIO})
+        Me.Guna2ContextMenuStrip1.Name = "Guna2ContextMenuStrip1"
+        Me.Guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
+        Me.Guna2ContextMenuStrip1.RenderStyle.ColorTable = Nothing
+        Me.Guna2ContextMenuStrip1.RenderStyle.RoundedEdges = True
+        Me.Guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White
+        Me.Guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.Guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
+        Me.Guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.Guna2ContextMenuStrip1.Size = New System.Drawing.Size(137, 30)
+        '
+        'ELIMINAR_ADMINUSUARIO
+        '
+        Me.ELIMINAR_ADMINUSUARIO.Image = CType(resources.GetObject("ELIMINAR_ADMINUSUARIO.Image"), System.Drawing.Image)
+        Me.ELIMINAR_ADMINUSUARIO.Name = "ELIMINAR_ADMINUSUARIO"
+        Me.ELIMINAR_ADMINUSUARIO.Size = New System.Drawing.Size(214, 26)
+        Me.ELIMINAR_ADMINUSUARIO.Text = "Eliminar"
+        '
         'frmAdministrarUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -203,7 +249,7 @@ Partial Class frmAdministrarUsuarios
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Guna2Button6)
         Me.Controls.Add(Me.txtFiltrarParticipante)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.L_ADMINUSUARIO)
         Me.Controls.Add(Me.btnAgregarUsuario)
         Me.Controls.Add(Me.btnEditarUsuario)
         Me.Controls.Add(Me.btnVerUsuario)
@@ -213,11 +259,12 @@ Partial Class frmAdministrarUsuarios
         Me.Name = "frmAdministrarUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
+        Me.Guna2ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents L_ADMINUSUARIO As ListView
     Friend WithEvents btnAgregarUsuario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEditarUsuario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnVerUsuario As Guna.UI2.WinForms.Guna2Button
@@ -229,4 +276,6 @@ Partial Class frmAdministrarUsuarios
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents Guna2ContextMenuStrip1 As Guna.UI2.WinForms.Guna2ContextMenuStrip
+    Friend WithEvents ELIMINAR_ADMINUSUARIO As ToolStripMenuItem
 End Class

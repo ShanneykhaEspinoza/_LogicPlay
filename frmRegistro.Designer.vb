@@ -31,9 +31,9 @@ Partial Class frmRegistro
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnAlmacenarRegistro = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2CirclePictureBox2 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.IDU_OBJ = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IDU_OBJ, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtNombreUsuario
@@ -99,7 +99,6 @@ Partial Class frmRegistro
         Me.txtContraseniaUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContraseniaUsuario.MaxLength = 8
         Me.txtContraseniaUsuario.Name = "txtContraseniaUsuario"
-        Me.txtContraseniaUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraseniaUsuario.PlaceholderText = "Cree una contraseña..."
         Me.txtContraseniaUsuario.SelectedText = ""
         Me.txtContraseniaUsuario.Size = New System.Drawing.Size(254, 47)
@@ -170,20 +169,20 @@ Partial Class frmRegistro
         Me.btnAlmacenarRegistro.TabIndex = 12
         Me.btnAlmacenarRegistro.Text = "&Almacenar"
         '
-        'Guna2CirclePictureBox2
+        'IDU_OBJ
         '
-        Me.Guna2CirclePictureBox2.BackColor = System.Drawing.Color.MidnightBlue
-        Me.Guna2CirclePictureBox2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2CirclePictureBox2.Image = CType(resources.GetObject("Guna2CirclePictureBox2.Image"), System.Drawing.Image)
-        Me.Guna2CirclePictureBox2.ImageRotate = 0!
-        Me.Guna2CirclePictureBox2.Location = New System.Drawing.Point(7, -1)
-        Me.Guna2CirclePictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Guna2CirclePictureBox2.Name = "Guna2CirclePictureBox2"
-        Me.Guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox2.Size = New System.Drawing.Size(76, 65)
-        Me.Guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2CirclePictureBox2.TabIndex = 14
-        Me.Guna2CirclePictureBox2.TabStop = False
+        Me.IDU_OBJ.BackColor = System.Drawing.Color.MidnightBlue
+        Me.IDU_OBJ.FillColor = System.Drawing.Color.Transparent
+        Me.IDU_OBJ.Image = CType(resources.GetObject("IDU_OBJ.Image"), System.Drawing.Image)
+        Me.IDU_OBJ.ImageRotate = 0!
+        Me.IDU_OBJ.Location = New System.Drawing.Point(7, -1)
+        Me.IDU_OBJ.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IDU_OBJ.Name = "IDU_OBJ"
+        Me.IDU_OBJ.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.IDU_OBJ.Size = New System.Drawing.Size(76, 65)
+        Me.IDU_OBJ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.IDU_OBJ.TabIndex = 14
+        Me.IDU_OBJ.TabStop = False
         '
         'Guna2Button1
         '
@@ -212,7 +211,7 @@ Partial Class frmRegistro
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(416, 426)
         Me.Controls.Add(Me.Guna2Button1)
-        Me.Controls.Add(Me.Guna2CirclePictureBox2)
+        Me.Controls.Add(Me.IDU_OBJ)
         Me.Controls.Add(Me.btnAlmacenarRegistro)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
@@ -226,7 +225,7 @@ Partial Class frmRegistro
         Me.Name = "frmRegistro"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form4"
-        CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IDU_OBJ, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -240,6 +239,6 @@ Partial Class frmRegistro
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents btnAlmacenarRegistro As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2CirclePictureBox2 As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents IDU_OBJ As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class

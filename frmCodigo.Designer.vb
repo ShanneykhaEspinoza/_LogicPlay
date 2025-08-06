@@ -31,6 +31,8 @@ Partial Class frmCodigo
         Me.listaUsuariosUnidosAPartida = New System.Windows.Forms.ListView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -126,6 +128,9 @@ Partial Class frmCodigo
         '
         'listaUsuariosUnidosAPartida
         '
+        Me.listaUsuariosUnidosAPartida.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
+        Me.listaUsuariosUnidosAPartida.FullRowSelect = True
+        Me.listaUsuariosUnidosAPartida.GridLines = True
         Me.listaUsuariosUnidosAPartida.HideSelection = False
         Me.listaUsuariosUnidosAPartida.Location = New System.Drawing.Point(12, 187)
         Me.listaUsuariosUnidosAPartida.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -133,6 +138,7 @@ Partial Class frmCodigo
         Me.listaUsuariosUnidosAPartida.Size = New System.Drawing.Size(519, 234)
         Me.listaUsuariosUnidosAPartida.TabIndex = 25
         Me.listaUsuariosUnidosAPartida.UseCompatibleStateImageBehavior = False
+        Me.listaUsuariosUnidosAPartida.View = System.Windows.Forms.View.Details
         '
         'Label2
         '
@@ -164,6 +170,16 @@ Partial Class frmCodigo
         Me.Guna2Button1.Size = New System.Drawing.Size(152, 48)
         Me.Guna2Button1.TabIndex = 27
         Me.Guna2Button1.Text = "&Regresar"
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Usuarios"
+        Me.ColumnHeader2.Width = 81
         '
         'frmCodigo
         '
@@ -200,4 +216,6 @@ Partial Class frmCodigo
     Friend WithEvents listaUsuariosUnidosAPartida As ListView
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
 End Class
