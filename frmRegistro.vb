@@ -1,7 +1,8 @@
 ﻿Public Class frmRegistro
     Private Sub btnAlmacenarRegistro_Click(sender As Object, e As EventArgs) Handles btnAlmacenarRegistro.Click
+        SQL = "INSERT INTO USUARIO (ID_USUARIO, NOMBRE_COMPLETO, CEDULA, CLAVE, ID_ROL) VALUES(" & PK("USUARIO", "ID_USUARIO") & ", '" & txtNombreUsuario.Text & "', '" & txtCedulaUsuario.Text & "', '" & txtContraseniaUsuario.Text & "')"
 
-
+        EJECUTAR(SQL)
         frmLogin.Show()
         Me.Hide()
     End Sub
@@ -37,5 +38,9 @@
         Else
             e.Handled = False
         End If
+    End Sub
+
+    Private Sub frmRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        NUEVO_USER = True 'se creará un nuevo usuario
     End Sub
 End Class
