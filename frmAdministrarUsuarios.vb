@@ -1,5 +1,23 @@
 ﻿Public Class frmAdministrarUsuarios
+    Friend Sub BUSCANDO(ByVal CONTENIDO As String)
+        T.Tables.Clear()
+        L_ADMINUSUARIO.Items.Clear()
+        'NOTA: arrglar ID
+        SQL = "SELECT ID_USUARIO, CEDULA, NOMBRE_COMPLETO, ID_ROL FROM USUARIO WHERE NOMBRE_COMPLETO LIKE '%" & CONTENIDO & "%'"
+        CARGAR_TABLA(T, SQL)
+        If T.Tables(0).Rows.Count > 0 Then
+            For I = 0 To T.Tables(0).Rows.Count - 1
+                L_ADMINUSUARIO.Items.Add(T.Tables(0).Rows(I).ItemArray(0))
+                For J = 1 To 3
 
+                    L_ADMINUSUARIO.Items(L_ADMINUSUARIO.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(I).ItemArray(J))
+                Next
+            Next
+            ELIMINAR_ADMINUSUARIO.Enabled = True
+        Else
+            ELIMINAR_ADMINUSUARIO.Enabled = False
+        End If
+    End Sub
 
     Private Sub Guna2Button6_Click(sender As Object, e As EventArgs) Handles Guna2Button6.Click
         frmMenu.Show()
