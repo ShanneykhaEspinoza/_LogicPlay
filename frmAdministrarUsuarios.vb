@@ -71,8 +71,4 @@
             End If
         End If
     End Sub
-
-    Private Sub L_ADMINUSUARIO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles L_ADMINUSUARIO.SelectedIndexChanged
-
-    End Sub
 End Class
