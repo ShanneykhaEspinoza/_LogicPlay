@@ -2,7 +2,7 @@
     Friend Sub BUSCANDO(ByVal CONTENIDO As String)
         T.Tables.Clear()
         L_ADMINUSUARIO.Items.Clear()
-
+        'NOTA: arrglar ID
         SQL = "SELECT ID_USUARIO, CEDULA, NOMBRE_COMPLETO, ID_ROL FROM USUARIO WHERE NOMBRE_COMPLETO LIKE '%" & CONTENIDO & "%'"
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then
