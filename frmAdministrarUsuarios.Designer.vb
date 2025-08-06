@@ -39,18 +39,38 @@ Partial Class frmAdministrarUsuarios
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(-4, 198)
-        Me.ListView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(912, 312)
-        Me.ListView1.TabIndex = 5
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.L_ADMINUSUARIO.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.L_ADMINUSUARIO.FullRowSelect = True
+        Me.L_ADMINUSUARIO.GridLines = True
+        Me.L_ADMINUSUARIO.HideSelection = False
+        Me.L_ADMINUSUARIO.Location = New System.Drawing.Point(73, 290)
+        Me.L_ADMINUSUARIO.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.L_ADMINUSUARIO.MultiSelect = False
+        Me.L_ADMINUSUARIO.Name = "L_ADMINUSUARIO"
+        Me.L_ADMINUSUARIO.Size = New System.Drawing.Size(912, 312)
+        Me.L_ADMINUSUARIO.TabIndex = 5
+        Me.L_ADMINUSUARIO.UseCompatibleStateImageBehavior = False
+        Me.L_ADMINUSUARIO.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Cedula"
+        Me.ColumnHeader2.Width = 220
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Nombre"
+        Me.ColumnHeader3.Width = 240
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Rol"
+        Me.ColumnHeader4.Width = 220
         '
         'btnAgregarUsuario
         '
@@ -182,15 +202,29 @@ Partial Class frmAdministrarUsuarios
         Me.ColumnHeader2.Text = "Cedula"
         Me.ColumnHeader2.Width = 220
         '
-        'ColumnHeader3
+        Me.Guna2ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.Guna2ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ELIMINAR_ADMINUSUARIO})
+        Me.Guna2ContextMenuStrip1.Name = "Guna2ContextMenuStrip1"
+        Me.Guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
+        Me.Guna2ContextMenuStrip1.RenderStyle.ColorTable = Nothing
+        Me.Guna2ContextMenuStrip1.RenderStyle.RoundedEdges = True
+        Me.Guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White
+        Me.Guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.Guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
+        Me.Guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.Guna2ContextMenuStrip1.Size = New System.Drawing.Size(137, 30)
         '
         Me.ColumnHeader3.Text = "Nombre"
         Me.ColumnHeader3.Width = 240
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "Rol"
-        Me.ColumnHeader4.Width = 220
+        Me.ELIMINAR_ADMINUSUARIO.Image = CType(resources.GetObject("ELIMINAR_ADMINUSUARIO.Image"), System.Drawing.Image)
+        Me.ELIMINAR_ADMINUSUARIO.Name = "ELIMINAR_ADMINUSUARIO"
+        Me.ELIMINAR_ADMINUSUARIO.Size = New System.Drawing.Size(214, 26)
+        Me.ELIMINAR_ADMINUSUARIO.Text = "Eliminar"
         '
         'frmAdministrarUsuarios
         '

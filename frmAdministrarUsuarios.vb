@@ -10,4 +10,51 @@
         frmRegistro.Show()
         Me.Hide()
     End Sub
+
+    Private Sub txtFiltrarParticipante_TextChanged(sender As Object, e As EventArgs) Handles txtFiltrarParticipante.TextChanged
+        BUSCANDO(txtFiltrarParticipante.Text)
+    End Sub
+
+    Private Sub ELIMINAR_ADMINUSUARIO_Click(sender As Object, e As EventArgs) Handles ELIMINAR_ADMINUSUARIO.Click
+        Dim ID As Integer
+        If L_ADMINUSUARIO.SelectedItems.Count > 0 Then
+            ID = L_ADMINUSUARIO.SelectedItems(0).SubItems(0).Text
+            If MsgBox("¿Desea eliminar la información seleccionada?", vbQuestion + vbYesNo, "Confirme") = vbYes Then
+                SQL = "DELETE FROM USUARIO WHERE ID = " & ID & ""
+                EJECUTAR(SQL)
+                BUSCANDO(txtFiltrarParticipante.Text)
+                MsgBox("La información ha sido eliminada satisfactoriamente.", vbInformation + vbOKOnly, "Concluido con éxito")
+            End If
+        End If
+    End Sub
+
+    Private Sub btnEditarUsuario_Click(sender As Object, e As EventArgs) Handles btnEditarUsuario.Click
+        If MsgBox("¿Desea actualizar esta información?", vbQuestion + vbYesNo, "Confirmar") = vbYes Then
+            If L_ADMINUSUARIO.SelectedItems.Count > 0 Then
+                Dim ID As Integer = L_ADMINUSUARIO.SelectedItems(0).SubItems(0).Text
+                frmRegistro.IDU_OBJ.Tag = ID
+                T.Tables.Clear()
+                SQL = "SELECT CEDULA, NOMBRE_COMPLETO, CLAVE, ID_ROL FROM USUARIO WHERE ID_USUARIO = " & ID & ""
+                CARGAR_TABLA(T, SQL)
+
+                frmRegistro.txtCedulaUsuario.Text = T.Tables(0).Rows(0).ItemArray(0)
+                frmRegistro.txtNombreUsuario.Text = T.Tables(0).Rows(0).ItemArray(1)
+                frmRegistro.txtContraseniaUsuario.Text = T.Tables(0).Rows(0).ItemArray(2)
+
+                NUEVO_USER = False 'lo que voy hacer es a modificar un usuario existente.
+                frmRegistro.Show()
+                Me.Close()
+            End If
+        Else
+            If L_ADMINUSUARIO.SelectedItems.Count > 0 Then
+                ELIMINAR_ADMINUSUARIO.Enabled = True
+            Else
+                ELIMINAR_ADMINUSUARIO.Enabled = False
+            End If
+        End If
+    End Sub
+
+    Private Sub L_ADMINUSUARIO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles L_ADMINUSUARIO.SelectedIndexChanged
+
+    End Sub
 End Class
