@@ -9,27 +9,30 @@
     End Sub
 
     Friend Sub LOGIN(ByVal CEDULA As String, ByVal CLAVE As String)
-        T.Tables.Clear()
+        Try
+            T.Tables.Clear()
 
-        SQL = "SELECT CEDULA, CLAVE, ID_ROL FROM USUARIO WHERE CEDULA = '" & CEDULA & "' AND CLAVE = '" & CLAVE & "'"
-        CARGAR_TABLA(T, SQL)
+            SQL = "SELECT CEDULA, CLAVE, ID_ROL FROM USUARIO WHERE CEDULA = '" & CEDULA & "' AND CLAVE = '" & CLAVE & "'"
+            CARGAR_TABLA(T, SQL)
 
-        Dim ROL As Integer = 0
-        ROL = T.Tables(0).Rows(0).ItemArray(2)
+            Dim ROL As Integer = 0
+            ROL = T.Tables(0).Rows(0).ItemArray(2)
 
-        If T.Tables(0).Rows.Count > 0 Then
-            MsgBox("Inicio de sesión exitoso", vbInformation + vbOKOnly)
-            If (ROL = 1) Then
-                frmMenu.Show()
-                Me.Hide()
+            If T.Tables(0).Rows.Count > 0 Then
+                MsgBox("Inicio de sesión exitoso", vbInformation + vbOKOnly)
+                If (ROL = 1) Then
+                    frmMenu.Show()
+                    Me.Hide()
+                Else
+                    frmMenuParticipante.Show()
+                    Me.Hide()
+                End If
             Else
-                frmMenuParticipante.Show()
-                Me.Hide()
+                MsgBox("Cédula o clave incorrecta", vbInformation + vbOKOnly)
             End If
-        Else
-            MsgBox("Cédula o clave incorrecta", vbInformation + vbOKOnly)
-        End If
-
+        Catch ex As Exception
+            MessageBox.Show("Error al guardar: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub txtCedulaRegistrada_TextChanged(sender As Object, e As EventArgs) Handles txtCedulaRegistrada.TextChanged
