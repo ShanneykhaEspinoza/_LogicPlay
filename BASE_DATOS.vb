@@ -1,4 +1,5 @@
 ﻿Module BASE_DATOS
+
     Public Db As New OleDb.OleDbConnection
     Public T As New DataSet
     Public SQL As String
@@ -34,11 +35,12 @@
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then
             T.Tables.Clear()
-            SQL = "SELECT MAX(ID) FROM " & TABLA
+            SQL = "SELECT MAX(" & ID & ") FROM " & TABLA
             CARGAR_TABLA(T, SQL)
             PK = T.Tables(0).Rows(0).ItemArray(0) + 1
         Else
             PK = 1
         End If
     End Function
+
 End Module

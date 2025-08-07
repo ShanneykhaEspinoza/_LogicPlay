@@ -36,7 +36,7 @@ Partial Class frmInicioPartida
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("MS PGothic", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(110, 122)
+        Me.Label1.Location = New System.Drawing.Point(122, 179)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(171, 28)
         Me.Label1.TabIndex = 3
@@ -54,7 +54,7 @@ Partial Class frmInicioPartida
         Me.cbxCuestionario.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cbxCuestionario.ForeColor = System.Drawing.Color.Black
         Me.cbxCuestionario.ItemHeight = 30
-        Me.cbxCuestionario.Location = New System.Drawing.Point(96, 159)
+        Me.cbxCuestionario.Location = New System.Drawing.Point(108, 216)
         Me.cbxCuestionario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbxCuestionario.Name = "cbxCuestionario"
         Me.cbxCuestionario.Size = New System.Drawing.Size(213, 36)
@@ -65,7 +65,7 @@ Partial Class frmInicioPartida
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("MS PGothic", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(69, 265)
+        Me.Label2.Location = New System.Drawing.Point(80, 298)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(275, 28)
         Me.Label2.TabIndex = 5
@@ -83,7 +83,7 @@ Partial Class frmInicioPartida
         Me.cbxTiempo.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cbxTiempo.ForeColor = System.Drawing.Color.Black
         Me.cbxTiempo.ItemHeight = 30
-        Me.cbxTiempo.Location = New System.Drawing.Point(93, 295)
+        Me.cbxTiempo.Location = New System.Drawing.Point(108, 328)
         Me.cbxTiempo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbxTiempo.Name = "cbxTiempo"
         Me.cbxTiempo.Size = New System.Drawing.Size(213, 36)
