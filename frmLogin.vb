@@ -30,8 +30,8 @@
             Else
                 MsgBox("Cédula o clave incorrecta", vbInformation + vbOKOnly)
             End If
-        Catch
-            MsgBox("Cédula o clave incorrecta", vbInformation + vbOKOnly)
+        Catch ex As Exception
+            MessageBox.Show("Error al guardar: " & ex.Message)
         End Try
     End Sub
 

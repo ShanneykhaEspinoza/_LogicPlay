@@ -46,36 +46,6 @@
     End Sub
 
     Private Sub L_ADMINCUESTIONARIO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles L_ADMINCUESTIONARIO.SelectedIndexChanged
-        If MsgBox("¿Desea actualizar esta información?", vbQuestion + vbYesNo, "Confirmar") = vbYes Then
-            If L_ADMINCUESTIONARIO.SelectedItems.Count > 0 Then
-                Dim ID As Integer = L.SelectedItems(0).SubItems(0).Text
-                REGISTRO_USUARIO.IDU_OBJ.Tag = ID
-                T.Tables.Clear()
-                SQL = "SELECT NOMBRE, CLAVE, CORREO, UBICACION, VISIBLE, BIOGRAFIA, FOTO FROM USUARIO WHERE ID = " & ID & ""
-                CARGAR_TABLA(T, SQL)
-
-                REGISTRO_USUARIO.NOMBRE.Text = T.Tables(0).Rows(0).ItemArray(0) 'nombre
-                REGISTRO_USUARIO.CLAVE.Text = T.Tables(0).Rows(0).ItemArray(1) ' clave
-                REGISTRO_USUARIO.CORREO.Text = T.Tables(0).Rows(0).ItemArray(2) ' correo
-                REGISTRO_USUARIO.PROVINCIA.Text = T.Tables(0).Rows(0).ItemArray(3) ' ubicacion
-                If T.Tables(0).Rows(0).ItemArray(4) = "V" Then ' visible
-                    REGISTRO_USUARIO.VISIBILIDAD.Checked = True
-                Else
-                    REGISTRO_USUARIO.VISIBILIDAD.Checked = False
-                End If
-                REGISTRO_USUARIO.BIOGRAFIA.Text = T.Tables(0).Rows(0).ItemArray(5) ' biografia
-                REGISTRO_USUARIO.FOTO.Image = Image.FromFile(T.Tables(0).Rows(0).ItemArray(6)) ' foto
-                REGISTRO_USUARIO.FOTO.Tag = T.Tables(0).Rows(0).ItemArray(6) ' foto
-                NUEVO_USER = False 'lo que voy hacer es a modificar un usuario existente.
-                REGISTRO_USUARIO.Show()
-                REGISTRO_USUARIO.BTN_IMPRIMIR.Enabled = True
-                Me.Close()
-            End If
-            If L_ADMINCUESTIONARIO.SelectedItems.Count > 0 Then
-            ELIMINAR.Enabled = True
-        Else
-            ELIMINAR.Enabled = False
-        End If
     End Sub
 
     Private Sub ELIMINAR_Click_1(sender As Object, e As EventArgs) Handles ELIMINAR.Click

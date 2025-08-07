@@ -43,6 +43,7 @@ Partial Class frmAdministrarUsuarios
         'L_ADMINUSUARIO
         '
         Me.L_ADMINUSUARIO.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.L_ADMINUSUARIO.ContextMenuStrip = Me.Guna2ContextMenuStrip1
         Me.L_ADMINUSUARIO.FullRowSelect = True
         Me.L_ADMINUSUARIO.GridLines = True
         Me.L_ADMINUSUARIO.HideSelection = False
