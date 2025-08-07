@@ -11,7 +11,7 @@
     <AssemblyName>LogicPlay</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <PublishUrl>publish\</PublishUrl>
@@ -96,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BASE_DATOS.vb" />
+    <Compile Include="frmCreacionCuestionario.Designer.vb">
+      <DependentUpon>frmCreacionCuestionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreacionCuestionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <Compile Include="VARIABLES_GLOBALES.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCreacionCuestionario.resx">
+      <DependentUpon>frmCreacionCuestionario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>

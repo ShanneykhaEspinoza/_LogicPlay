@@ -6,7 +6,92 @@
     End Sub
 
     Private Sub btnAgregarPreguntas_Click(sender As Object, e As EventArgs) Handles btnAgregarCuestionario.Click
-        frmPreguntas.Show()
+        frmCreacionCuestionario.Show()
         Me.Hide()
+    End Sub
+
+    Friend Sub BUSCANDO(ByVal CONTENIDO As String)
+        T.Tables.Clear()
+        L_ADMINCUESTIONARIO.Items.Clear()
+        'NOTA: arrglar ID
+        SQL = "SELECT ID_QUIZZ, NOMBRE, FECHA_CREACION FROM QUIZZ WHERE NOMBRE LIKE '%" & CONTENIDO & "%'"
+        CARGAR_TABLA(T, SQL)
+
+        If T.Tables(0).Rows.Count > 0 Then
+            For I = 0 To T.Tables(0).Rows.Count - 1
+                L_ADMINCUESTIONARIO.Items.Add(T.Tables(0).Rows(I).ItemArray(0))
+                For J = 1 To 4
+                    If J = 1 Then
+                        L_ADMINCUESTIONARIO.Items(L_ADMINCUESTIONARIO.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(I).ItemArray(1))
+                    End If
+                    If J = 2 Then
+                        L_ADMINCUESTIONARIO.Items(L_ADMINCUESTIONARIO.Items.Count - 1).SubItems.Add("Ya casi lo agrego")
+                    End If
+                    If J = 3 Then
+                        L_ADMINCUESTIONARIO.Items(L_ADMINCUESTIONARIO.Items.Count - 1).SubItems.Add("Ya casi lo agrego")
+                    End If
+                    If J = 4 Then
+                        L_ADMINCUESTIONARIO.Items(L_ADMINCUESTIONARIO.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(I).ItemArray(2))
+                    End If
+                Next
+            Next
+            ELIMINAR.Enabled = True
+        Else
+            ELIMINAR.Enabled = False
+        End If
+    End Sub
+
+    Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        BUSCANDO(txtBuscar.Text)
+    End Sub
+
+    Private Sub L_ADMINCUESTIONARIO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles L_ADMINCUESTIONARIO.SelectedIndexChanged
+        If MsgBox("¿Desea actualizar esta información?", vbQuestion + vbYesNo, "Confirmar") = vbYes Then
+            If L_ADMINCUESTIONARIO.SelectedItems.Count > 0 Then
+                Dim ID As Integer = L.SelectedItems(0).SubItems(0).Text
+                REGISTRO_USUARIO.IDU_OBJ.Tag = ID
+                T.Tables.Clear()
+                SQL = "SELECT NOMBRE, CLAVE, CORREO, UBICACION, VISIBLE, BIOGRAFIA, FOTO FROM USUARIO WHERE ID = " & ID & ""
+                CARGAR_TABLA(T, SQL)
+
+                REGISTRO_USUARIO.NOMBRE.Text = T.Tables(0).Rows(0).ItemArray(0) 'nombre
+                REGISTRO_USUARIO.CLAVE.Text = T.Tables(0).Rows(0).ItemArray(1) ' clave
+                REGISTRO_USUARIO.CORREO.Text = T.Tables(0).Rows(0).ItemArray(2) ' correo
+                REGISTRO_USUARIO.PROVINCIA.Text = T.Tables(0).Rows(0).ItemArray(3) ' ubicacion
+                If T.Tables(0).Rows(0).ItemArray(4) = "V" Then ' visible
+                    REGISTRO_USUARIO.VISIBILIDAD.Checked = True
+                Else
+                    REGISTRO_USUARIO.VISIBILIDAD.Checked = False
+                End If
+                REGISTRO_USUARIO.BIOGRAFIA.Text = T.Tables(0).Rows(0).ItemArray(5) ' biografia
+                REGISTRO_USUARIO.FOTO.Image = Image.FromFile(T.Tables(0).Rows(0).ItemArray(6)) ' foto
+                REGISTRO_USUARIO.FOTO.Tag = T.Tables(0).Rows(0).ItemArray(6) ' foto
+                NUEVO_USER = False 'lo que voy hacer es a modificar un usuario existente.
+                REGISTRO_USUARIO.Show()
+                REGISTRO_USUARIO.BTN_IMPRIMIR.Enabled = True
+                Me.Close()
+            End If
+            If L_ADMINCUESTIONARIO.SelectedItems.Count > 0 Then
+            ELIMINAR.Enabled = True
+        Else
+            ELIMINAR.Enabled = False
+        End If
+    End Sub
+
+    Private Sub ELIMINAR_Click_1(sender As Object, e As EventArgs) Handles ELIMINAR.Click
+        Dim ID As Integer
+        If L_ADMINCUESTIONARIO.SelectedItems.Count > 0 Then
+            ID = L_ADMINCUESTIONARIO.SelectedItems(0).SubItems(0).Text
+            If MsgBox("¿Desea eliminar la información seleccionada?", vbQuestion + vbYesNo, "Confirme") = vbYes Then
+                SQL = "DELETE FROM QUIZZ WHERE ID_QUIZZ = " & ID & ""
+                EJECUTAR(SQL)
+                BUSCANDO(txtBuscar.Text)
+                MsgBox("La información ha sido eliminada satisfactoriamente.", vbInformation + vbOKOnly, "Concluido con éxito")
+            End If
+        End If
+    End Sub
+
+    Private Sub btnEditarCuestionario_Click(sender As Object, e As EventArgs) Handles btnEditarCuestionario.Click
+
     End Sub
 End Class
