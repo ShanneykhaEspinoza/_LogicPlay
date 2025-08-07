@@ -10,7 +10,7 @@
         Db.ConnectionString = Ruta
         Db.Open()
     End Sub
-
+    'Confirm.
     Friend Sub DESCONECTAR()
         Db.Close()
     End Sub
