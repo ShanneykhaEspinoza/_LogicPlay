@@ -33,6 +33,8 @@ Partial Class frmRegistro
         Me.btnAlmacenarRegistro = New Guna.UI2.WinForms.Guna2Button()
         Me.IDU_OBJ = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.txtConfirmarContrasenia = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.IDU_OBJ, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,6 +77,7 @@ Partial Class frmRegistro
         Me.txtCedulaUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtCedulaUsuario.Location = New System.Drawing.Point(84, 185)
         Me.txtCedulaUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCedulaUsuario.MaxLength = 9
         Me.txtCedulaUsuario.Name = "txtCedulaUsuario"
         Me.txtCedulaUsuario.PlaceholderText = "Digite su identificación..."
         Me.txtCedulaUsuario.SelectedText = ""
@@ -162,7 +165,7 @@ Partial Class frmRegistro
         Me.btnAlmacenarRegistro.ForeColor = System.Drawing.Color.Black
         Me.btnAlmacenarRegistro.Image = CType(resources.GetObject("btnAlmacenarRegistro.Image"), System.Drawing.Image)
         Me.btnAlmacenarRegistro.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnAlmacenarRegistro.Location = New System.Drawing.Point(237, 357)
+        Me.btnAlmacenarRegistro.Location = New System.Drawing.Point(237, 453)
         Me.btnAlmacenarRegistro.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAlmacenarRegistro.Name = "btnAlmacenarRegistro"
         Me.btnAlmacenarRegistro.Size = New System.Drawing.Size(152, 48)
@@ -196,12 +199,46 @@ Partial Class frmRegistro
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
         Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
-        Me.Guna2Button1.Location = New System.Drawing.Point(41, 357)
+        Me.Guna2Button1.Location = New System.Drawing.Point(41, 453)
         Me.Guna2Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(152, 48)
         Me.Guna2Button1.TabIndex = 15
         Me.Guna2Button1.Text = "&Regresar"
+        '
+        'txtConfirmarContrasenia
+        '
+        Me.txtConfirmarContrasenia.BackColor = System.Drawing.Color.Transparent
+        Me.txtConfirmarContrasenia.BorderRadius = 10
+        Me.txtConfirmarContrasenia.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtConfirmarContrasenia.DefaultText = ""
+        Me.txtConfirmarContrasenia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtConfirmarContrasenia.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtConfirmarContrasenia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtConfirmarContrasenia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtConfirmarContrasenia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtConfirmarContrasenia.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtConfirmarContrasenia.ForeColor = System.Drawing.Color.Black
+        Me.txtConfirmarContrasenia.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtConfirmarContrasenia.Location = New System.Drawing.Point(84, 368)
+        Me.txtConfirmarContrasenia.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtConfirmarContrasenia.MaxLength = 8
+        Me.txtConfirmarContrasenia.Name = "txtConfirmarContrasenia"
+        Me.txtConfirmarContrasenia.PlaceholderText = "Cree una contraseña..."
+        Me.txtConfirmarContrasenia.SelectedText = ""
+        Me.txtConfirmarContrasenia.Size = New System.Drawing.Size(254, 47)
+        Me.txtConfirmarContrasenia.TabIndex = 16
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(100, 344)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(210, 20)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "Confirmar contraseña"
         '
         'frmRegistro
         '
@@ -209,7 +246,9 @@ Partial Class frmRegistro
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(416, 426)
+        Me.ClientSize = New System.Drawing.Size(416, 512)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.txtConfirmarContrasenia)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.IDU_OBJ)
         Me.Controls.Add(Me.btnAlmacenarRegistro)
@@ -241,4 +280,6 @@ Partial Class frmRegistro
     Friend WithEvents btnAlmacenarRegistro As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents IDU_OBJ As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtConfirmarContrasenia As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label5 As Label
 End Class

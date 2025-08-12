@@ -1,8 +1,9 @@
 ﻿Public Class frmAdministrarUsuarios
+
+
     Friend Sub BUSCANDO(ByVal CONTENIDO As String)
         T.Tables.Clear()
         L_ADMINUSUARIO.Items.Clear()
-        'NOTA: arrglar ID
         SQL = "SELECT ID_USUARIO, CEDULA, NOMBRE_COMPLETO, ID_ROL FROM USUARIO WHERE NOMBRE_COMPLETO LIKE '%" & CONTENIDO & "%'"
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then
@@ -24,8 +25,10 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles btnAgregarUsuario.Click
-        frmRegistro.Show()
+    public Sub btnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles btnAgregarUsuario.Click
+        Dim registroForm As New frmRegistro(Me)
+        NUEVO_USER = True
+        registroForm.Show()
         Me.Hide()
     End Sub
 
@@ -38,7 +41,7 @@
         If L_ADMINUSUARIO.SelectedItems.Count > 0 Then
             ID = L_ADMINUSUARIO.SelectedItems(0).SubItems(0).Text
             If MsgBox("¿Desea eliminar la información seleccionada?", vbQuestion + vbYesNo, "Confirme") = vbYes Then
-                SQL = "DELETE FROM USUARIO WHERE ID = " & ID & ""
+                SQL = "DELETE FROM USUARIO WHERE ID_USUARIO = " & ID & ""
                 EJECUTAR(SQL)
                 BUSCANDO(txtFiltrarParticipante.Text)
                 MsgBox("La información ha sido eliminada satisfactoriamente.", vbInformation + vbOKOnly, "Concluido con éxito")
@@ -48,21 +51,24 @@
 
     Private Sub btnEditarUsuario_Click(sender As Object, e As EventArgs) Handles btnEditarUsuario.Click
         If MsgBox("¿Desea actualizar esta información?", vbQuestion + vbYesNo, "Confirmar") = vbYes Then
+
             If L_ADMINUSUARIO.SelectedItems.Count > 0 Then
+                Dim registroForm As New frmRegistro(Me)
                 Dim ID As Integer = L_ADMINUSUARIO.SelectedItems(0).SubItems(0).Text
-                frmRegistro.IDU_OBJ.Tag = ID
+                NUEVO_USER = False
+                registroForm.IDU_OBJ.Tag = ID
                 T.Tables.Clear()
                 SQL = "SELECT CEDULA, NOMBRE_COMPLETO, CLAVE, ID_ROL FROM USUARIO WHERE ID_USUARIO = " & ID & ""
                 CARGAR_TABLA(T, SQL)
 
-                frmRegistro.txtCedulaUsuario.Text = T.Tables(0).Rows(0).ItemArray(0)
-                frmRegistro.txtNombreUsuario.Text = T.Tables(0).Rows(0).ItemArray(1)
-                frmRegistro.txtContraseniaUsuario.Text = T.Tables(0).Rows(0).ItemArray(2)
+                registroForm.txtCedulaUsuario.Text = T.Tables(0).Rows(0).ItemArray(0)
+                registroForm.txtNombreUsuario.Text = T.Tables(0).Rows(0).ItemArray(1)
+                registroForm.txtContraseniaUsuario.Text = T.Tables(0).Rows(0).ItemArray(2)
 
-                NUEVO_USER = False 'lo que voy hacer es a modificar un usuario existente.
-                frmRegistro.Show()
-                Me.Close()
+                registroForm.Show()
+                Me.Hide()
             End If
+
         Else
             If L_ADMINUSUARIO.SelectedItems.Count > 0 Then
                 ELIMINAR_ADMINUSUARIO.Enabled = True
