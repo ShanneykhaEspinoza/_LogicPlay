@@ -4,7 +4,8 @@
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        frmRegistro.Show()
+        Dim registroForm As New frmRegistro(Me)
+        registroForm.Show()
         Me.Hide()
     End Sub
 

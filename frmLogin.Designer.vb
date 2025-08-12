@@ -52,6 +52,7 @@ Partial Class frmLogin
         Me.txtCedulaRegistrada.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtCedulaRegistrada.Location = New System.Drawing.Point(51, 171)
         Me.txtCedulaRegistrada.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCedulaRegistrada.MaxLength = 9
         Me.txtCedulaRegistrada.Name = "txtCedulaRegistrada"
         Me.txtCedulaRegistrada.PlaceholderText = "Digite su identificación..."
         Me.txtCedulaRegistrada.SelectedText = ""

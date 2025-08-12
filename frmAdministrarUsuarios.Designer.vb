@@ -43,15 +43,14 @@ Partial Class frmAdministrarUsuarios
         'L_ADMINUSUARIO
         '
         Me.L_ADMINUSUARIO.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.L_ADMINUSUARIO.ContextMenuStrip = Me.Guna2ContextMenuStrip1
         Me.L_ADMINUSUARIO.FullRowSelect = True
         Me.L_ADMINUSUARIO.GridLines = True
         Me.L_ADMINUSUARIO.HideSelection = False
-        Me.L_ADMINUSUARIO.Location = New System.Drawing.Point(11, 168)
-        Me.L_ADMINUSUARIO.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.L_ADMINUSUARIO.Location = New System.Drawing.Point(-4, 194)
+        Me.L_ADMINUSUARIO.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.L_ADMINUSUARIO.MultiSelect = False
         Me.L_ADMINUSUARIO.Name = "L_ADMINUSUARIO"
-        Me.L_ADMINUSUARIO.Size = New System.Drawing.Size(609, 204)
+        Me.L_ADMINUSUARIO.Size = New System.Drawing.Size(915, 322)
         Me.L_ADMINUSUARIO.TabIndex = 5
         Me.L_ADMINUSUARIO.UseCompatibleStateImageBehavior = False
         Me.L_ADMINUSUARIO.View = System.Windows.Forms.View.Details
@@ -87,10 +86,10 @@ Partial Class frmAdministrarUsuarios
         Me.btnAgregarUsuario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnAgregarUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnAgregarUsuario.ForeColor = System.Drawing.Color.White
-        Me.btnAgregarUsuario.Location = New System.Drawing.Point(25, 116)
-        Me.btnAgregarUsuario.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.btnAgregarUsuario.Location = New System.Drawing.Point(33, 142)
+        Me.btnAgregarUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAgregarUsuario.Name = "btnAgregarUsuario"
-        Me.btnAgregarUsuario.Size = New System.Drawing.Size(86, 34)
+        Me.btnAgregarUsuario.Size = New System.Drawing.Size(115, 42)
         Me.btnAgregarUsuario.TabIndex = 6
         Me.btnAgregarUsuario.Text = "Agregar"
         '
@@ -105,10 +104,10 @@ Partial Class frmAdministrarUsuarios
         Me.btnEditarUsuario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnEditarUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnEditarUsuario.ForeColor = System.Drawing.Color.White
-        Me.btnEditarUsuario.Location = New System.Drawing.Point(127, 116)
-        Me.btnEditarUsuario.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.btnEditarUsuario.Location = New System.Drawing.Point(170, 142)
+        Me.btnEditarUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEditarUsuario.Name = "btnEditarUsuario"
-        Me.btnEditarUsuario.Size = New System.Drawing.Size(91, 34)
+        Me.btnEditarUsuario.Size = New System.Drawing.Size(122, 42)
         Me.btnEditarUsuario.TabIndex = 7
         Me.btnEditarUsuario.Text = "Actualizar"
         '
@@ -123,10 +122,10 @@ Partial Class frmAdministrarUsuarios
         Me.btnVerUsuario.FillColor = System.Drawing.Color.MidnightBlue
         Me.btnVerUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnVerUsuario.ForeColor = System.Drawing.Color.White
-        Me.btnVerUsuario.Location = New System.Drawing.Point(244, 116)
-        Me.btnVerUsuario.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.btnVerUsuario.Location = New System.Drawing.Point(313, 142)
+        Me.btnVerUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnVerUsuario.Name = "btnVerUsuario"
-        Me.btnVerUsuario.Size = New System.Drawing.Size(86, 34)
+        Me.btnVerUsuario.Size = New System.Drawing.Size(115, 42)
         Me.btnVerUsuario.TabIndex = 9
         Me.btnVerUsuario.Text = "Ver"
         '
@@ -145,11 +144,12 @@ Partial Class frmAdministrarUsuarios
         Me.txtFiltrarParticipante.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFiltrarParticipante.ForeColor = System.Drawing.Color.Black
         Me.txtFiltrarParticipante.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtFiltrarParticipante.Location = New System.Drawing.Point(127, 66)
+        Me.txtFiltrarParticipante.Location = New System.Drawing.Point(170, 82)
+        Me.txtFiltrarParticipante.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtFiltrarParticipante.Name = "txtFiltrarParticipante"
         Me.txtFiltrarParticipante.PlaceholderText = "Digite el nombre del participante..."
         Me.txtFiltrarParticipante.SelectedText = ""
-        Me.txtFiltrarParticipante.Size = New System.Drawing.Size(397, 32)
+        Me.txtFiltrarParticipante.Size = New System.Drawing.Size(529, 39)
         Me.txtFiltrarParticipante.TabIndex = 10
         '
         'Label1
@@ -157,10 +157,9 @@ Partial Class frmAdministrarUsuarios
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("MS PGothic", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(137, 42)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(183, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 22)
+        Me.Label1.Size = New System.Drawing.Size(144, 28)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Búsqueda "
         '
@@ -177,10 +176,10 @@ Partial Class frmAdministrarUsuarios
         Me.Guna2Button6.ForeColor = System.Drawing.Color.GhostWhite
         Me.Guna2Button6.Image = CType(resources.GetObject("Guna2Button6.Image"), System.Drawing.Image)
         Me.Guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button6.Location = New System.Drawing.Point(-3, 8)
-        Me.Guna2Button6.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.Guna2Button6.Location = New System.Drawing.Point(-4, 10)
+        Me.Guna2Button6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2Button6.Name = "Guna2Button6"
-        Me.Guna2Button6.Size = New System.Drawing.Size(136, 34)
+        Me.Guna2Button6.Size = New System.Drawing.Size(181, 42)
         Me.Guna2Button6.TabIndex = 14
         Me.Guna2Button6.Text = "    &Regresar    "
         '
@@ -189,10 +188,9 @@ Partial Class frmAdministrarUsuarios
         Me.Label4.BackColor = System.Drawing.Color.MidnightBlue
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Label4.Location = New System.Drawing.Point(123, 8)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(164, 10)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(566, 34)
+        Me.Label4.Size = New System.Drawing.Size(755, 42)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "    Administrar usuarios"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -211,23 +209,23 @@ Partial Class frmAdministrarUsuarios
         Me.Guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White
         Me.Guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
         Me.Guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.Guna2ContextMenuStrip1.Size = New System.Drawing.Size(122, 30)
+        Me.Guna2ContextMenuStrip1.Size = New System.Drawing.Size(137, 30)
         '
         'ELIMINAR_ADMINUSUARIO
         '
         Me.ELIMINAR_ADMINUSUARIO.Image = CType(resources.GetObject("ELIMINAR_ADMINUSUARIO.Image"), System.Drawing.Image)
         Me.ELIMINAR_ADMINUSUARIO.Name = "ELIMINAR_ADMINUSUARIO"
-        Me.ELIMINAR_ADMINUSUARIO.Size = New System.Drawing.Size(121, 26)
+        Me.ELIMINAR_ADMINUSUARIO.Size = New System.Drawing.Size(136, 26)
         Me.ELIMINAR_ADMINUSUARIO.Text = "Eliminar"
         '
         'frmAdministrarUsuarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(681, 415)
+        Me.ClientSize = New System.Drawing.Size(908, 510)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Guna2Button6)
         Me.Controls.Add(Me.txtFiltrarParticipante)
@@ -237,7 +235,7 @@ Partial Class frmAdministrarUsuarios
         Me.Controls.Add(Me.btnVerUsuario)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmAdministrarUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
