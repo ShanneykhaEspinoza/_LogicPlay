@@ -2,6 +2,8 @@
 
     Public Db As New OleDb.OleDbConnection
     Public T As New DataSet
+    Public Tt As New DataSet
+    Public Ttt As New DataSet
     Public SQL As String
 
     Friend Sub CONECTAR()

@@ -25,7 +25,7 @@
         Me.Hide()
     End Sub
 
-    public Sub btnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles btnAgregarUsuario.Click
+    Public Sub btnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles btnAgregarUsuario.Click
         Dim registroForm As New frmRegistro(Me)
         NUEVO_USER = True
         registroForm.Show()

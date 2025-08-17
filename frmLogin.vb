@@ -10,30 +10,28 @@
     End Sub
 
     Friend Sub LOGIN(ByVal CEDULA As String, ByVal CLAVE As String)
-        Try
-            T.Tables.Clear()
+        T.Tables.Clear()
 
-            SQL = "SELECT CEDULA, CLAVE, ID_ROL FROM USUARIO WHERE CEDULA = '" & CEDULA & "' AND CLAVE = '" & CLAVE & "'"
-            CARGAR_TABLA(T, SQL)
+        SQL = "SELECT CEDULA, CLAVE, ID_ROL, ID_USUARIO FROM USUARIO WHERE CEDULA = '" & CEDULA & "' AND CLAVE = '" & CLAVE & "'"
+        CARGAR_TABLA(T, SQL)
 
-            Dim ROL As Integer = 0
+        Dim ROL As Integer = 0
+
+        If T.Tables(0).Rows.Count > 0 Then
             ROL = T.Tables(0).Rows(0).ItemArray(2)
-
-            If T.Tables(0).Rows.Count > 0 Then
-                MsgBox("Inicio de sesión exitoso", vbInformation + vbOKOnly)
-                If (ROL = 1) Then
-                    frmMenu.Show()
-                    Me.Hide()
-                Else
-                    frmMenuParticipante.Show()
-                    Me.Hide()
-                End If
+            MsgBox("Inicio de sesión exitoso", vbInformation + vbOKOnly)
+            If (ROL = 1) Then
+                frmMenu.Show()
+                Me.Hide()
+                SESION_USUARIO = T.Tables(0).Rows(0).Item(3)
             Else
-                MsgBox("Cédula o clave incorrecta", vbInformation + vbOKOnly)
+                frmMenuParticipante.Show()
+                Me.Hide()
+                SESION_USUARIO = T.Tables(0).Rows(0).Item(3)
             End If
-        Catch ex As Exception
-            MessageBox.Show("Error al guardar: " & ex.Message)
-        End Try
+        Else
+            MsgBox("Cédula o clave incorrecta", vbInformation + vbOKOnly)
+        End If
     End Sub
 
     Private Sub txtCedulaRegistrada_TextChanged(sender As Object, e As EventArgs) Handles txtCedulaRegistrada.TextChanged
@@ -52,8 +50,5 @@
     End Sub
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
-
-
 End Class

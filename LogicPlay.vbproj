@@ -65,7 +65,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net461\Guna.UI2.dll</HintPath>
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -115,10 +115,10 @@
     <Compile Include="frmMenuParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="btnCopiarCodigo.Designer.vb">
-      <DependentUpon>btnCopiarCodigo.vb</DependentUpon>
+    <Compile Include="frmIngresarCodigo.Designer.vb">
+      <DependentUpon>frmIngresarCodigo.vb</DependentUpon>
     </Compile>
-    <Compile Include="btnCopiarCodigo.vb">
+    <Compile Include="frmIngresarCodigo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEnPartida.Designer.vb">
@@ -181,10 +181,10 @@
     <Compile Include="frmInicioPartida.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCodigo.Designer.vb">
-      <DependentUpon>frmCodigo.vb</DependentUpon>
+    <Compile Include="frmLobby.Designer.vb">
+      <DependentUpon>frmLobby.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCodigo.vb">
+    <Compile Include="frmLobby.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -215,8 +215,8 @@
     <EmbeddedResource Include="frmMenuParticipante.resx">
       <DependentUpon>frmMenuParticipante.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="btnCopiarCodigo.resx">
-      <DependentUpon>btnCopiarCodigo.vb</DependentUpon>
+    <EmbeddedResource Include="frmIngresarCodigo.resx">
+      <DependentUpon>frmIngresarCodigo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnPartida.resx">
       <DependentUpon>frmEnPartida.vb</DependentUpon>
@@ -248,8 +248,8 @@
     <EmbeddedResource Include="frmInicioPartida.resx">
       <DependentUpon>frmInicioPartida.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCodigo.resx">
-      <DependentUpon>frmCodigo.vb</DependentUpon>
+    <EmbeddedResource Include="frmLobby.resx">
+      <DependentUpon>frmLobby.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

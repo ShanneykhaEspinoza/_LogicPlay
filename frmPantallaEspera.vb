@@ -1,20 +1,38 @@
-﻿Public Class frmPantallaEspera
+﻿Imports System.Timers
+Public Class frmPantallaEspera
+    Dim timer As Timer
     Private Sub Form14_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Configura el Timer cuando el formulario se carga
-        Timer1.Interval = 100 ' Establece el intervalo en milisegundos (100 ms = 10 veces por segundo)
-        Timer1.Start()        ' Inicia el Timer para que empiece a contar
+        timer = New Timer(1000)
+        AddHandler timer.Elapsed, New ElapsedEventHandler(AddressOf EmpezarPartida)
+        timer.SynchronizingObject = Me
+        timer.AutoReset = True
+        timer.Start()
+
+        Timer1.Interval = 100
+        Timer1.Start()
+    End Sub
+
+    Friend Sub EmpezarPartida(ByVal sender As Object, ByVal e As ElapsedEventArgs)
+        T.Tables.Clear()
+        SQL = "SELECT INICIADA FROM PARTICIPACION WHERE CODIGO_SESION = '" & frmCodigoParticipante.txtCodigoIngresadoJugador.Text & "'"
+        CARGAR_TABLA(T, SQL)
+
+        If T.Tables(0).Rows.Count > 0 Then
+            If T.Tables(0).Rows(0).Item(0) = True Then
+                frmEnPartida.Show()
+                Me.Close()
+                timer.Stop()
+            End If
+        End If
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ' Este código se ejecuta cada vez que el Timer "hace un tick"
 
-        ' Mueve el Label 5 píxeles hacia la derecha
-        ' La propiedad Left controla la posición horizontal (coordenada X)
         lblMovimiento.Left += 5
 
-        ' Opcional: Si quieres que desaparezca por el borde derecho y reaparezca por la izquierda
         If lblMovimiento.Left > Me.ClientSize.Width Then
-            lblMovimiento.Left = -lblMovimiento.Width ' Mueve el Label completamente fuera del borde izquierdo
+            lblMovimiento.Left = -lblMovimiento.Width
         End If
 
     End Sub

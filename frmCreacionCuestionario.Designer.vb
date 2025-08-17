@@ -23,9 +23,7 @@ Partial Class frmCreacionCuestionario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCreacionCuestionario))
-        Me.CODIGO = New System.Windows.Forms.Label()
         Me.btnGuardarPreguntas = New Guna.UI2.WinForms.Guna2Button()
-        Me.Text1 = New System.Windows.Forms.Label()
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.txtNombreCuestionario = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,15 +31,6 @@ Partial Class frmCreacionCuestionario
         Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'CODIGO
-        '
-        Me.CODIGO.AutoSize = True
-        Me.CODIGO.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CODIGO.Location = New System.Drawing.Point(167, 253)
-        Me.CODIGO.Name = "CODIGO"
-        Me.CODIGO.Size = New System.Drawing.Size(0, 16)
-        Me.CODIGO.TabIndex = 40
         '
         'btnGuardarPreguntas
         '
@@ -62,16 +51,6 @@ Partial Class frmCreacionCuestionario
         Me.btnGuardarPreguntas.Size = New System.Drawing.Size(180, 31)
         Me.btnGuardarPreguntas.TabIndex = 39
         Me.btnGuardarPreguntas.Text = "&Guardar cuestionario"
-        '
-        'Text1
-        '
-        Me.Text1.AutoSize = True
-        Me.Text1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Text1.Location = New System.Drawing.Point(45, 253)
-        Me.Text1.Name = "Text1"
-        Me.Text1.Size = New System.Drawing.Size(116, 16)
-        Me.Text1.TabIndex = 38
-        Me.Text1.Text = "EL CODIGO ES:"
         '
         'Guna2Button6
         '
@@ -107,7 +86,7 @@ Partial Class frmCreacionCuestionario
         Me.txtNombreCuestionario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtNombreCuestionario.ForeColor = System.Drawing.Color.Black
         Me.txtNombreCuestionario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNombreCuestionario.Location = New System.Drawing.Point(48, 133)
+        Me.txtNombreCuestionario.Location = New System.Drawing.Point(47, 206)
         Me.txtNombreCuestionario.Name = "txtNombreCuestionario"
         Me.txtNombreCuestionario.PlaceholderText = "Nombre del cuestionario..."
         Me.txtNombreCuestionario.SelectedText = ""
@@ -119,7 +98,7 @@ Partial Class frmCreacionCuestionario
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(45, 105)
+        Me.Label3.Location = New System.Drawing.Point(44, 178)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(251, 16)
@@ -159,9 +138,7 @@ Partial Class frmCreacionCuestionario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(513, 498)
-        Me.Controls.Add(Me.CODIGO)
         Me.Controls.Add(Me.btnGuardarPreguntas)
-        Me.Controls.Add(Me.Text1)
         Me.Controls.Add(Me.Guna2Button6)
         Me.Controls.Add(Me.txtNombreCuestionario)
         Me.Controls.Add(Me.Label3)
@@ -176,10 +153,7 @@ Partial Class frmCreacionCuestionario
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents CODIGO As Label
     Friend WithEvents btnGuardarPreguntas As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Text1 As Label
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtNombreCuestionario As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
