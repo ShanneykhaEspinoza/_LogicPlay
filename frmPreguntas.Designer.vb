@@ -33,6 +33,7 @@ Partial Class frmPreguntas
         Me.txtRespuestaErronea1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtRespuestaErronea3 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnVerPreguntasAlmacenadas = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAgregarPregunta = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.ABRIR = New System.Windows.Forms.OpenFileDialog()
         Me.btnAgregarImagen = New Guna.UI2.WinForms.Guna2Button()
@@ -41,13 +42,10 @@ Partial Class frmPreguntas
         Me.Cuestionario = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnGuardarPreguntas = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.txtTiempo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.IMAGEN = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.VIDEO = New AxWMPLib.AxWindowsMediaPlayer()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IMAGEN, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VIDEO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2CirclePictureBox1
@@ -73,7 +71,7 @@ Partial Class frmPreguntas
         Me.Label4.Location = New System.Drawing.Point(-2, -2)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(457, 47)
+        Me.Label4.Size = New System.Drawing.Size(474, 47)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "     Registro de preguntas"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -82,6 +80,7 @@ Partial Class frmPreguntas
         '
         Me.txtPreguntaCuestionario.BackColor = System.Drawing.Color.Transparent
         Me.txtPreguntaCuestionario.BorderRadius = 10
+        Me.txtPreguntaCuestionario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtPreguntaCuestionario.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPreguntaCuestionario.DefaultText = ""
         Me.txtPreguntaCuestionario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -92,12 +91,11 @@ Partial Class frmPreguntas
         Me.txtPreguntaCuestionario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPreguntaCuestionario.ForeColor = System.Drawing.Color.Black
         Me.txtPreguntaCuestionario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPreguntaCuestionario.Location = New System.Drawing.Point(8, 317)
-        Me.txtPreguntaCuestionario.MaxLength = 130
+        Me.txtPreguntaCuestionario.Location = New System.Drawing.Point(19, 264)
         Me.txtPreguntaCuestionario.Name = "txtPreguntaCuestionario"
         Me.txtPreguntaCuestionario.PlaceholderText = "Ingrese una pregunta..."
         Me.txtPreguntaCuestionario.SelectedText = ""
-        Me.txtPreguntaCuestionario.Size = New System.Drawing.Size(426, 28)
+        Me.txtPreguntaCuestionario.Size = New System.Drawing.Size(388, 28)
         Me.txtPreguntaCuestionario.TabIndex = 14
         '
         'Label2
@@ -105,7 +103,7 @@ Partial Class frmPreguntas
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(5, 298)
+        Me.Label2.Location = New System.Drawing.Point(16, 245)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(378, 16)
@@ -117,7 +115,7 @@ Partial Class frmPreguntas
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(5, 402)
+        Me.Label1.Location = New System.Drawing.Point(16, 349)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(248, 16)
@@ -138,12 +136,11 @@ Partial Class frmPreguntas
         Me.txtRespuestaCorrecta.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtRespuestaCorrecta.ForeColor = System.Drawing.Color.Black
         Me.txtRespuestaCorrecta.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRespuestaCorrecta.Location = New System.Drawing.Point(8, 352)
-        Me.txtRespuestaCorrecta.MaxLength = 130
+        Me.txtRespuestaCorrecta.Location = New System.Drawing.Point(19, 299)
         Me.txtRespuestaCorrecta.Name = "txtRespuestaCorrecta"
         Me.txtRespuestaCorrecta.PlaceholderText = "Indique la respuesta a su pregunta..."
         Me.txtRespuestaCorrecta.SelectedText = ""
-        Me.txtRespuestaCorrecta.Size = New System.Drawing.Size(426, 28)
+        Me.txtRespuestaCorrecta.Size = New System.Drawing.Size(388, 28)
         Me.txtRespuestaCorrecta.TabIndex = 17
         '
         'txtRespuestaErronea2
@@ -160,12 +157,11 @@ Partial Class frmPreguntas
         Me.txtRespuestaErronea2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtRespuestaErronea2.ForeColor = System.Drawing.Color.Black
         Me.txtRespuestaErronea2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRespuestaErronea2.Location = New System.Drawing.Point(8, 421)
-        Me.txtRespuestaErronea2.MaxLength = 130
+        Me.txtRespuestaErronea2.Location = New System.Drawing.Point(19, 368)
         Me.txtRespuestaErronea2.Name = "txtRespuestaErronea2"
         Me.txtRespuestaErronea2.PlaceholderText = "Digite una respuesta posible..."
         Me.txtRespuestaErronea2.SelectedText = ""
-        Me.txtRespuestaErronea2.Size = New System.Drawing.Size(426, 26)
+        Me.txtRespuestaErronea2.Size = New System.Drawing.Size(388, 26)
         Me.txtRespuestaErronea2.TabIndex = 18
         '
         'txtRespuestaErronea1
@@ -182,12 +178,11 @@ Partial Class frmPreguntas
         Me.txtRespuestaErronea1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtRespuestaErronea1.ForeColor = System.Drawing.Color.Black
         Me.txtRespuestaErronea1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRespuestaErronea1.Location = New System.Drawing.Point(8, 453)
-        Me.txtRespuestaErronea1.MaxLength = 130
+        Me.txtRespuestaErronea1.Location = New System.Drawing.Point(19, 400)
         Me.txtRespuestaErronea1.Name = "txtRespuestaErronea1"
         Me.txtRespuestaErronea1.PlaceholderText = "Digite una respuesta posible..."
         Me.txtRespuestaErronea1.SelectedText = ""
-        Me.txtRespuestaErronea1.Size = New System.Drawing.Size(426, 28)
+        Me.txtRespuestaErronea1.Size = New System.Drawing.Size(388, 28)
         Me.txtRespuestaErronea1.TabIndex = 19
         '
         'txtRespuestaErronea3
@@ -204,12 +199,11 @@ Partial Class frmPreguntas
         Me.txtRespuestaErronea3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtRespuestaErronea3.ForeColor = System.Drawing.Color.Black
         Me.txtRespuestaErronea3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRespuestaErronea3.Location = New System.Drawing.Point(8, 487)
-        Me.txtRespuestaErronea3.MaxLength = 130
+        Me.txtRespuestaErronea3.Location = New System.Drawing.Point(19, 434)
         Me.txtRespuestaErronea3.Name = "txtRespuestaErronea3"
         Me.txtRespuestaErronea3.PlaceholderText = "Digite una respuesta posible..."
         Me.txtRespuestaErronea3.SelectedText = ""
-        Me.txtRespuestaErronea3.Size = New System.Drawing.Size(426, 28)
+        Me.txtRespuestaErronea3.Size = New System.Drawing.Size(388, 28)
         Me.txtRespuestaErronea3.TabIndex = 20
         '
         'btnVerPreguntasAlmacenadas
@@ -225,12 +219,32 @@ Partial Class frmPreguntas
         Me.btnVerPreguntasAlmacenadas.ForeColor = System.Drawing.Color.Black
         Me.btnVerPreguntasAlmacenadas.Image = CType(resources.GetObject("btnVerPreguntasAlmacenadas.Image"), System.Drawing.Image)
         Me.btnVerPreguntasAlmacenadas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnVerPreguntasAlmacenadas.Location = New System.Drawing.Point(268, 664)
+        Me.btnVerPreguntasAlmacenadas.Location = New System.Drawing.Point(250, 675)
         Me.btnVerPreguntasAlmacenadas.Margin = New System.Windows.Forms.Padding(2)
         Me.btnVerPreguntasAlmacenadas.Name = "btnVerPreguntasAlmacenadas"
         Me.btnVerPreguntasAlmacenadas.Size = New System.Drawing.Size(166, 31)
         Me.btnVerPreguntasAlmacenadas.TabIndex = 21
         Me.btnVerPreguntasAlmacenadas.Text = "&Verificar almacenadas "
+        '
+        'btnAgregarPregunta
+        '
+        Me.btnAgregarPregunta.BackColor = System.Drawing.Color.Transparent
+        Me.btnAgregarPregunta.BorderRadius = 10
+        Me.btnAgregarPregunta.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAgregarPregunta.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAgregarPregunta.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAgregarPregunta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAgregarPregunta.FillColor = System.Drawing.Color.GreenYellow
+        Me.btnAgregarPregunta.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnAgregarPregunta.ForeColor = System.Drawing.Color.Black
+        Me.btnAgregarPregunta.Image = CType(resources.GetObject("btnAgregarPregunta.Image"), System.Drawing.Image)
+        Me.btnAgregarPregunta.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.btnAgregarPregunta.Location = New System.Drawing.Point(14, 675)
+        Me.btnAgregarPregunta.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAgregarPregunta.Name = "btnAgregarPregunta"
+        Me.btnAgregarPregunta.Size = New System.Drawing.Size(166, 31)
+        Me.btnAgregarPregunta.TabIndex = 22
+        Me.btnAgregarPregunta.Text = "&Agregar pregunta "
         '
         'Guna2Button6
         '
@@ -269,19 +283,19 @@ Partial Class frmPreguntas
         Me.btnAgregarImagen.ForeColor = System.Drawing.Color.Black
         Me.btnAgregarImagen.Image = CType(resources.GetObject("btnAgregarImagen.Image"), System.Drawing.Image)
         Me.btnAgregarImagen.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnAgregarImagen.Location = New System.Drawing.Point(113, 265)
+        Me.btnAgregarImagen.Location = New System.Drawing.Point(295, 212)
         Me.btnAgregarImagen.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAgregarImagen.Name = "btnAgregarImagen"
-        Me.btnAgregarImagen.Size = New System.Drawing.Size(231, 31)
+        Me.btnAgregarImagen.Size = New System.Drawing.Size(166, 31)
         Me.btnAgregarImagen.TabIndex = 26
-        Me.btnAgregarImagen.Text = "&Agregar video, audio o imagen"
+        Me.btnAgregarImagen.Text = "&Agregar archivo"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 600)
+        Me.Label5.Location = New System.Drawing.Point(17, 547)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(249, 16)
@@ -302,8 +316,7 @@ Partial Class frmPreguntas
         Me.txtPuntos.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPuntos.ForeColor = System.Drawing.Color.Black
         Me.txtPuntos.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPuntos.Location = New System.Drawing.Point(9, 623)
-        Me.txtPuntos.MaxLength = 4
+        Me.txtPuntos.Location = New System.Drawing.Point(20, 570)
         Me.txtPuntos.Name = "txtPuntos"
         Me.txtPuntos.PlaceholderText = "Digite los puntos..."
         Me.txtPuntos.SelectedText = ""
@@ -315,7 +328,7 @@ Partial Class frmPreguntas
         Me.Cuestionario.AutoSize = True
         Me.Cuestionario.BackColor = System.Drawing.Color.Transparent
         Me.Cuestionario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cuestionario.Location = New System.Drawing.Point(232, 58)
+        Me.Cuestionario.Location = New System.Drawing.Point(231, 73)
         Me.Cuestionario.Name = "Cuestionario"
         Me.Cuestionario.Size = New System.Drawing.Size(0, 16)
         Me.Cuestionario.TabIndex = 37
@@ -325,7 +338,7 @@ Partial Class frmPreguntas
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(131, 58)
+        Me.Label3.Location = New System.Drawing.Point(130, 73)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 16)
         Me.Label3.TabIndex = 36
@@ -344,12 +357,31 @@ Partial Class frmPreguntas
         Me.btnGuardarPreguntas.ForeColor = System.Drawing.Color.Black
         Me.btnGuardarPreguntas.Image = CType(resources.GetObject("btnGuardarPreguntas.Image"), System.Drawing.Image)
         Me.btnGuardarPreguntas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.btnGuardarPreguntas.Location = New System.Drawing.Point(4, 664)
+        Me.btnGuardarPreguntas.Location = New System.Drawing.Point(2, 631)
         Me.btnGuardarPreguntas.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGuardarPreguntas.Name = "btnGuardarPreguntas"
         Me.btnGuardarPreguntas.Size = New System.Drawing.Size(180, 31)
         Me.btnGuardarPreguntas.TabIndex = 40
-        Me.btnGuardarPreguntas.Text = "&Guardar pregunta"
+        Me.btnGuardarPreguntas.Text = "&Guardar cuestionario"
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 10
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.GreenYellow
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Guna2Button1.Location = New System.Drawing.Point(227, 631)
+        Me.Guna2Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(180, 31)
+        Me.Guna2Button1.TabIndex = 41
+        Me.Guna2Button1.Text = "&Ver preguntas"
         '
         'txtTiempo
         '
@@ -365,8 +397,7 @@ Partial Class frmPreguntas
         Me.txtTiempo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtTiempo.ForeColor = System.Drawing.Color.Black
         Me.txtTiempo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtTiempo.Location = New System.Drawing.Point(9, 552)
-        Me.txtTiempo.MaxLength = 4
+        Me.txtTiempo.Location = New System.Drawing.Point(20, 499)
         Me.txtTiempo.Name = "txtTiempo"
         Me.txtTiempo.PlaceholderText = "Digite los segundos..."
         Me.txtTiempo.SelectedText = ""
@@ -378,33 +409,12 @@ Partial Class frmPreguntas
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("MS PGothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(6, 529)
+        Me.Label6.Location = New System.Drawing.Point(17, 476)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(273, 16)
         Me.Label6.TabIndex = 42
         Me.Label6.Text = "Ingrese los segundos por pregunta:"
-        '
-        'IMAGEN
-        '
-        Me.IMAGEN.ImageRotate = 0!
-        Me.IMAGEN.Location = New System.Drawing.Point(113, 80)
-        Me.IMAGEN.Name = "IMAGEN"
-        Me.IMAGEN.Size = New System.Drawing.Size(231, 180)
-        Me.IMAGEN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.IMAGEN.TabIndex = 47
-        Me.IMAGEN.TabStop = False
-        Me.IMAGEN.Visible = False
-        '
-        'VIDEO
-        '
-        Me.VIDEO.Enabled = True
-        Me.VIDEO.Location = New System.Drawing.Point(15, 80)
-        Me.VIDEO.Name = "VIDEO"
-        Me.VIDEO.OcxState = CType(resources.GetObject("VIDEO.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.VIDEO.Size = New System.Drawing.Size(419, 180)
-        Me.VIDEO.TabIndex = 48
-        Me.VIDEO.Visible = False
         '
         'frmPreguntas
         '
@@ -412,9 +422,10 @@ Partial Class frmPreguntas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(454, 702)
+        Me.ClientSize = New System.Drawing.Size(472, 673)
         Me.Controls.Add(Me.txtTiempo)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.btnGuardarPreguntas)
         Me.Controls.Add(Me.Cuestionario)
         Me.Controls.Add(Me.Label3)
@@ -422,6 +433,7 @@ Partial Class frmPreguntas
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnAgregarImagen)
         Me.Controls.Add(Me.Guna2Button6)
+        Me.Controls.Add(Me.btnAgregarPregunta)
         Me.Controls.Add(Me.btnVerPreguntasAlmacenadas)
         Me.Controls.Add(Me.txtRespuestaErronea3)
         Me.Controls.Add(Me.txtRespuestaErronea1)
@@ -432,16 +444,12 @@ Partial Class frmPreguntas
         Me.Controls.Add(Me.txtPreguntaCuestionario)
         Me.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.IMAGEN)
-        Me.Controls.Add(Me.VIDEO)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPreguntas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form6"
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IMAGEN, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VIDEO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -457,6 +465,7 @@ Partial Class frmPreguntas
     Friend WithEvents txtRespuestaErronea1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtRespuestaErronea3 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnVerPreguntasAlmacenadas As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAgregarPregunta As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ABRIR As OpenFileDialog
     Friend WithEvents btnAgregarImagen As Guna.UI2.WinForms.Guna2Button
@@ -465,8 +474,7 @@ Partial Class frmPreguntas
     Friend WithEvents Cuestionario As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnGuardarPreguntas As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtTiempo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents IMAGEN As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents VIDEO As AxWMPLib.AxWindowsMediaPlayer
 End Class
